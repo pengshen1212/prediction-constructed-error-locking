@@ -1,0 +1,27 @@
+C:\Users\Peng1\OneDrive\文档\ChatGPT\hypergraph\experiments\prob2-relation-error\downstream_degradation.py:41: DeprecationWarning: Please import `csr_matrix` from the `scipy.sparse` namespace; the `scipy.sparse.csr` namespace is deprecated and will be removed in SciPy 2.0.0.
+  feats = pickle.load(f)
+Clean operator: λ_max = 44.641, h = 0.0224
+  T=1: acc=0.659, signal=0.075
+  T=2: acc=0.655, signal=0.073
+  T=5: acc=0.645, signal=0.069
+  T=10: acc=0.629, signal=0.064
+
+--- p = 0.05 (q_hom=0.1425, q_mix=0.0475) ---
+  T=1: rep_err A/B = 1.054/1.039 (ratio 1.01), acc A=0.660 B=0.660 (diff -0.0000 CI [-0.0003,+0.0002])
+  T=2: rep_err A/B = 1.892/1.622 (ratio 1.17), acc A=0.656 B=0.656 (diff +0.0003 CI [-0.0000,+0.0006])
+  T=5: rep_err A/B = 4.009/3.324 (ratio 1.21), acc A=0.648 B=0.648 (diff -0.0003 CI [-0.0008,+0.0003])
+  T=10: rep_err A/B = 6.175/5.500 (ratio 1.12), acc A=0.633 B=0.633 (diff +0.0006 CI [-0.0002,+0.0014])
+
+--- p = 0.10 (q_hom=0.2700, q_mix=0.0900) ---
+  T=1: rep_err A/B = 1.617/1.677 (ratio 0.96), acc A=0.661 B=0.661 (diff -0.0005 CI [-0.0008,-0.0002])
+  T=2: rep_err A/B = 2.839/2.464 (ratio 1.15), acc A=0.658 B=0.657 (diff +0.0003 CI [-0.0002,+0.0008])
+  T=5: rep_err A/B = 5.627/4.971 (ratio 1.13), acc A=0.650 B=0.649 (diff +0.0005 CI [-0.0003,+0.0012])
+  T=10: rep_err A/B = 8.527/7.939 (ratio 1.07), acc A=0.637 B=0.636 (diff +0.0005 CI [-0.0005,+0.0015])
+
+--- p = 0.20 (q_hom=0.4800, q_mix=0.1600) ---
+  T=1: rep_err A/B = 2.183/2.650 (ratio 0.82), acc A=0.662 B=0.662 (diff -0.0007 CI [-0.0011,-0.0003])
+  T=2: rep_err A/B = 3.781/3.826 (ratio 0.99), acc A=0.659 B=0.659 (diff -0.0001 CI [-0.0005,+0.0004])
+  T=5: rep_err A/B = 7.693/7.400 (ratio 1.04), acc A=0.653 B=0.652 (diff +0.0014 CI [+0.0007,+0.0022])
+  T=10: rep_err A/B = 11.720/11.733 (ratio 1.00), acc A=0.643 B=0.643 (diff +0.0003 CI [-0.0009,+0.0014])
+
+已写出 results/downstream_degradation.json

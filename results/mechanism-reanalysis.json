@@ -1,0 +1,899 @@
+{
+  "protocol": "paired saved-trajectory reanalysis, 2026-10-08",
+  "n_boot": 2000,
+  "bootstrap_seed": 99,
+  "weighting": "realized phat in each realization, then average",
+  "scope": "fixed datasets; no training, propagation rerun, or fitted prediction rule",
+  "sources": {
+    "cora": {
+      "path": "experiments\\prob2-relation-error\\results\\signpred_cora_eval_raw.json",
+      "sha256": "180e051d74f26c981108eb5adb358b6ea2697cd915d1f12d674d6dedce507146"
+    },
+    "cora_appnp": {
+      "path": "experiments\\prob2-relation-error\\results\\signpred_cora_appnp_eval_raw.json",
+      "sha256": "7e39bb38a6b364a5f2e6df951d542fd358d85a9bdf13d2f6c4fd44056b530854"
+    },
+    "dblp_appnp": {
+      "path": "experiments\\prob2-relation-error\\results\\signpred_dblp_appnp_eval_raw.json",
+      "sha256": "01ccbee371ae2862ddf977f268df3a446751bad03a4ef9ce5dcf3afa5e62b0c9"
+    }
+  },
+  "cells": [
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "independent",
+      "q": 0.1,
+      "depth": 2,
+      "source_cell": "('indep', 0.1, 'indep', 0.1, 0.1)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09903618906942394,
+      "margin_difference": 0.00031297887056167206,
+      "margin_ci": [
+        8.69808490009333e-06,
+        0.0006335571851069853
+      ],
+      "accuracy_difference": -5.169867060560773e-05,
+      "accuracy_ci": [
+        -0.0001144756277695658,
+        1.1078286558354771e-05
+      ],
+      "corrupted_contribution": 0.0027168645163504266,
+      "corrupted_ci": [
+        0.00262463721862258,
+        0.002814532047629117
+      ],
+      "clean_contribution": -0.002403885645788751,
+      "clean_ci": [
+        -0.002634517830046884,
+        -0.00217455831433348
+      ],
+      "max_decomposition_residual": 2.983724378680108e-16,
+      "conditional_means": {
+        "mA_cor": 0.8013526026741105,
+        "mB_cor": 0.7739350265937339,
+        "mA_cln": 0.7688058468896065,
+        "mB_cln": 0.7714720934505813
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "independent",
+      "q": 0.1,
+      "depth": 5,
+      "source_cell": "('indep', 0.1, 'indep', 0.1, 0.1)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09903618906942394,
+      "margin_difference": 0.0013457997452985626,
+      "margin_ci": [
+        0.0008137646845176735,
+        0.0019076796067333767
+      ],
+      "accuracy_difference": -0.0002511078286558333,
+      "accuracy_ci": [
+        -0.00036558345642540236,
+        -0.00013663220088626306
+      ],
+      "corrupted_contribution": 0.005646152063117918,
+      "corrupted_ci": [
+        0.005476482205772815,
+        0.005822115298279989
+      ],
+      "clean_contribution": -0.004300352317819359,
+      "clean_ci": [
+        -0.004714319620138252,
+        -0.0038949697623311195
+      ],
+      "max_decomposition_residual": 2.3505503099485736e-16,
+      "conditional_means": {
+        "mA_cor": 0.8003342840478466,
+        "mB_cor": 0.7433672142623229,
+        "mA_cln": 0.7363821659896371,
+        "mB_cln": 0.7411511435681609
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "independent",
+      "q": 0.1,
+      "depth": 10,
+      "source_cell": "('indep', 0.1, 'indep', 0.1, 0.1)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09903618906942394,
+      "margin_difference": 0.0031692099147928266,
+      "margin_ci": [
+        0.0023972150274527153,
+        0.003984783714012523
+      ],
+      "accuracy_difference": -0.0006056129985228976,
+      "accuracy_ci": [
+        -0.0008530280649926161,
+        -0.00037656942392909706
+      ],
+      "corrupted_contribution": 0.009179847359703265,
+      "corrupted_ci": [
+        0.008910039089310755,
+        0.009447850007921544
+      ],
+      "clean_contribution": -0.00601063744491044,
+      "clean_ci": [
+        -0.006585167079051949,
+        -0.0054422647763244176
+      ],
+      "max_decomposition_residual": 2.688821387764051e-16,
+      "conditional_means": {
+        "mA_cor": 0.7988254969657517,
+        "mB_cor": 0.7062237287227723,
+        "mA_cln": 0.6976079050598456,
+        "mB_cln": 0.7042725662236077
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "independent",
+      "q": 0.1,
+      "depth": 20,
+      "source_cell": "('indep', 0.1, 'indep', 0.1, 0.1)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09903618906942394,
+      "margin_difference": 0.006392664058358238,
+      "margin_ci": [
+        0.0053608933263088335,
+        0.007472241116499704
+      ],
+      "accuracy_difference": -0.0001772525849335205,
+      "accuracy_ci": [
+        -0.0005576070901033881,
+        0.00020310192023634827
+      ],
+      "corrupted_contribution": 0.013665197532529472,
+      "corrupted_ci": [
+        0.013277943757290927,
+        0.014056064815611183
+      ],
+      "clean_contribution": -0.00727253347417124,
+      "clean_ci": [
+        -0.00799888987437593,
+        -0.00652701049067066
+      ],
+      "max_decomposition_residual": 2.5934115965853266e-16,
+      "conditional_means": {
+        "mA_cor": 0.7963632439539962,
+        "mB_cor": 0.6585346758368797,
+        "mA_cln": 0.6487524698201027,
+        "mB_cln": 0.6568151235653857
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "truth",
+      "q": null,
+      "depth": 2,
+      "source_cell": "('sweep', 0.1, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": 0.00029897803339534956,
+      "margin_ci": [
+        -1.0621062380839593e-05,
+        0.000617538532856136
+      ],
+      "accuracy_difference": 8.124076809453485e-05,
+      "accuracy_ci": [
+        1.8463810930575697e-05,
+        0.00014032496307237133
+      ],
+      "corrupted_contribution": 0.0031446926144207176,
+      "corrupted_ci": [
+        0.003047184353740948,
+        0.003252692545004771
+      ],
+      "clean_contribution": -0.0028457145810253832,
+      "clean_ci": [
+        -0.0030679529822403994,
+        -0.0026142232533434033
+      ],
+      "max_decomposition_residual": 3.8510861166685117e-16,
+      "conditional_means": {
+        "mA_cor": 0.9991753022669865,
+        "mB_cor": 0.9673154774630939,
+        "mA_cln": 0.9644244739925935,
+        "mB_cln": 0.9675785327669995
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "truth",
+      "q": null,
+      "depth": 5,
+      "source_cell": "('sweep', 0.1, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": 0.0014783344689704757,
+      "margin_ci": [
+        0.0009275755481546677,
+        0.002049346527271822
+      ],
+      "accuracy_difference": -0.0001772525849335338,
+      "accuracy_ci": [
+        -0.0003138847858197935,
+        -4.062038404727406e-05
+      ],
+      "corrupted_contribution": 0.00655952668607363,
+      "corrupted_ci": [
+        0.0063754239162444135,
+        0.006754655615420509
+      ],
+      "clean_contribution": -0.005081192217103161,
+      "clean_ci": [
+        -0.005475136569195374,
+        -0.004657198814314194
+      ],
+      "max_decomposition_residual": 4.623038063478191e-16,
+      "conditional_means": {
+        "mA_cor": 0.9980333534893231,
+        "mB_cor": 0.9315981560422497,
+        "mA_cln": 0.926676958871101,
+        "mB_cln": 0.9323078830954966
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "truth",
+      "q": null,
+      "depth": 10,
+      "source_cell": "('sweep', 0.1, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": 0.0035576230114200613,
+      "margin_ci": [
+        0.002758339490159665,
+        0.004385274293311389
+      ],
+      "accuracy_difference": -0.0005132939438700079,
+      "accuracy_ci": [
+        -0.0007644017725258446,
+        -0.00026587887740028507
+      ],
+      "corrupted_contribution": 0.010688885408977571,
+      "corrupted_ci": [
+        0.010401753161627761,
+        0.010983697257329474
+      ],
+      "clean_contribution": -0.0071312623975575105,
+      "clean_ci": [
+        -0.007706267254517521,
+        -0.006523650961933087
+      ],
+      "max_decomposition_residual": 4.744468706796567e-16,
+      "conditional_means": {
+        "mA_cor": 0.9963590200376263,
+        "mB_cor": 0.8881215116257459,
+        "mA_cln": 0.8814259898873802,
+        "mB_cln": 0.8893279954313086
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "truth",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.1, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": 0.007235725643305134,
+      "margin_ci": [
+        0.006124081937339101,
+        0.008347227238680392
+      ],
+      "accuracy_difference": -0.00032127031019202443,
+      "accuracy_ci": [
+        -0.00074593796159527,
+        0.0001367245199409166
+      ],
+      "corrupted_contribution": 0.015935427058564967,
+      "corrupted_ci": [
+        0.01551986779325196,
+        0.016356559686078742
+      ],
+      "clean_contribution": -0.008699701415259836,
+      "clean_ci": [
+        -0.009459114458081076,
+        -0.007903709336411597
+      ],
+      "max_decomposition_residual": 4.0419056990259605e-16,
+      "conditional_means": {
+        "mA_cor": 0.9936568262986937,
+        "mB_cor": 0.8323073134315336,
+        "mA_cln": 0.8242670665067665,
+        "mB_cln": 0.8339060918008747
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 2,
+      "source_cell": "('sweep', 0.1, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": -0.003972651411842094,
+      "margin_ci": [
+        -0.004166000227502846,
+        -0.003771174882325576
+      ],
+      "accuracy_difference": -0.0001846381093057581,
+      "accuracy_ci": [
+        -0.0002363367799113714,
+        -0.00013663220088625972
+      ],
+      "corrupted_contribution": 0.0007113503652003933,
+      "corrupted_ci": [
+        0.0006879629452525589,
+        0.0007366942756675304
+      ],
+      "clean_contribution": -0.004684001777042513,
+      "clean_ci": [
+        -0.004869271764426443,
+        -0.0044946242697126776
+      ],
+      "max_decomposition_residual": 5.273559366969494e-16,
+      "conditional_means": {
+        "mA_cor": -0.9983868269848192,
+        "mB_cor": -1.0056049281227528,
+        "mA_cln": 0.9643454583734851,
+        "mB_cln": 0.9695398647713225
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 5,
+      "source_cell": "('sweep', 0.1, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": -0.007470004559027147,
+      "margin_ci": [
+        -0.007806444732747018,
+        -0.0070981541507493424
+      ],
+      "accuracy_difference": -0.0008161004431314622,
+      "accuracy_ci": [
+        -0.0009194977843426877,
+        -0.0007163958641063517
+      ],
+      "corrupted_contribution": 0.0011042107542213655,
+      "corrupted_ci": [
+        0.0010540253433703698,
+        0.001156448981971112
+      ],
+      "clean_contribution": -0.008574215313248538,
+      "clean_ci": [
+        -0.008904229038013856,
+        -0.008228914707281966
+      ],
+      "max_decomposition_residual": 3.3133218391157016e-16,
+      "conditional_means": {
+        "mA_cor": -0.996401402070732,
+        "mB_cor": -1.0076076264213396,
+        "mA_cln": 0.9265263317579311,
+        "mB_cln": 0.9360343837967959
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 10,
+      "source_cell": "('sweep', 0.1, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": -0.011079862765557976,
+      "margin_ci": [
+        -0.01157659920126085,
+        -0.010553191494513874
+      ],
+      "accuracy_difference": -0.0025627769571639545,
+      "accuracy_ci": [
+        -0.002765878877400292,
+        -0.002355889955686846
+      ],
+      "corrupted_contribution": 0.0011460242770549457,
+      "corrupted_ci": [
+        0.0010635335704194844,
+        0.0012325289930397562
+      ],
+      "clean_contribution": -0.012225887042612918,
+      "clean_ci": [
+        -0.012693290553849657,
+        -0.011732797751028708
+      ],
+      "max_decomposition_residual": 3.0357660829594124e-16,
+      "conditional_means": {
+        "mA_cor": -0.9937297108832256,
+        "mB_cor": -1.0053654131999687,
+        "mA_cln": 0.8812055988537483,
+        "mB_cln": 0.8947626535630289
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.1, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": -0.014679343031405563,
+      "margin_ci": [
+        -0.015351103226060757,
+        -0.013983671704544686
+      ],
+      "accuracy_difference": -0.005502215657311666,
+      "accuracy_ci": [
+        -0.0058715841949778394,
+        -0.005147618168389954
+      ],
+      "corrupted_contribution": 0.00038069221670194666,
+      "corrupted_ci": [
+        0.000246072105529137,
+        0.0005147869301971456
+      ],
+      "clean_contribution": -0.015060035248107517,
+      "clean_ci": [
+        -0.01571514857773783,
+        -0.01439208589117348
+      ],
+      "max_decomposition_residual": 2.949029909160572e-16,
+      "conditional_means": {
+        "mA_cor": -0.9898532606337571,
+        "mB_cor": -0.9937412446899364,
+        "mA_cln": 0.8239910784775131,
+        "mB_cln": 0.8406903888905313
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.2,
+      "initialization": "truth",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.2, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.2005502215657312,
+      "margin_difference": 0.00976756018403514,
+      "margin_ci": [
+        0.008316520759448318,
+        0.011180102792313717
+      ],
+      "accuracy_difference": -0.0009379615952732634,
+      "accuracy_ci": [
+        -0.0014145125553914368,
+        -0.0004689807976366322
+      ],
+      "corrupted_contribution": 0.024706821367634513,
+      "corrupted_ci": [
+        0.024236133542077414,
+        0.025167068326108547
+      ],
+      "clean_contribution": -0.014939261183599405,
+      "clean_ci": [
+        -0.01603110952110449,
+        -0.01391069761036863
+      ],
+      "max_decomposition_residual": 4.0592529337857286e-16,
+      "conditional_means": {
+        "mA_cor": 0.9917297184530098,
+        "mB_cor": 0.8685600041254582,
+        "mA_cln": 0.8509178946206919,
+        "mB_cln": 0.8695809593135428
+      }
+    },
+    {
+      "tag": "cora",
+      "p": 0.2,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.2, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.2005502215657312,
+      "margin_difference": -0.024748525193756244,
+      "margin_ci": [
+        -0.025700653924454666,
+        -0.023785934181930563
+      ],
+      "accuracy_difference": -0.00750369276218611,
+      "accuracy_ci": [
+        -0.00785450516986705,
+        -0.007152880354505167
+      ],
+      "corrupted_contribution": 9.164911787863291e-05,
+      "corrupted_ci": [
+        -9.871837473057911e-05,
+        0.0002885684967645722
+      ],
+      "clean_contribution": -0.024840174311634874,
+      "clean_ci": [
+        -0.025804000414383577,
+        -0.023925778059609923
+      ],
+      "max_decomposition_residual": 2.0816681711721685e-16,
+      "conditional_means": {
+        "mA_cor": -0.9882049115010375,
+        "mB_cor": -0.9886908194171853,
+        "mA_cln": 0.8503340579376338,
+        "mB_cln": 0.881387236452367
+      }
+    },
+    {
+      "tag": "cora_appnp",
+      "p": 0.1,
+      "initialization": "truth",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.1, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": 0.0024887041586953507,
+      "margin_ci": [
+        0.0016732250046363492,
+        0.003305743711917144
+      ],
+      "accuracy_difference": -0.00017355982274741,
+      "accuracy_ci": [
+        -0.00037675406203840407,
+        3.332717872969956e-05
+      ],
+      "corrupted_contribution": 0.0007884779530786894,
+      "corrupted_ci": [
+        0.0004913638992542119,
+        0.001067621412262495
+      ],
+      "clean_contribution": 0.0017002262056166786,
+      "clean_ci": [
+        0.0009349935492451267,
+        0.0024830274719755893
+      ],
+      "max_decomposition_residual": 5.403663627667754e-16,
+      "conditional_means": {
+        "mA_cor": 0.9736182399683097,
+        "mB_cor": 0.9656697397205556,
+        "mA_cln": 0.9667818552534645,
+        "mB_cln": 0.9648978679276982
+      }
+    },
+    {
+      "tag": "cora_appnp",
+      "p": 0.1,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.1, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09864844903988183,
+      "margin_difference": -0.00795962101208565,
+      "margin_ci": [
+        -0.008777754172829532,
+        -0.007134374938433484
+      ],
+      "accuracy_difference": -0.02889955686853767,
+      "accuracy_ci": [
+        -0.02964918759231905,
+        -0.028194239290989673
+      ],
+      "corrupted_contribution": -0.04349870750188197,
+      "corrupted_ci": [
+        -0.04446783311907574,
+        -0.0425545671567334
+      ],
+      "clean_contribution": 0.035539086489796326,
+      "clean_ci": [
+        0.034529977100923856,
+        0.036587583971605386
+      ],
+      "max_decomposition_residual": 4.579669976578771e-16,
+      "conditional_means": {
+        "mA_cor": -0.9967458771377368,
+        "mB_cor": -0.5561172974321343,
+        "mA_cln": 0.9691340123768961,
+        "mB_cln": 0.9296911042097856
+      }
+    },
+    {
+      "tag": "cora_appnp",
+      "p": 0.2,
+      "initialization": "truth",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.2, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.2005502215657312,
+      "margin_difference": 0.0037089731000175753,
+      "margin_ci": [
+        0.002791941946218751,
+        0.004627898805322251
+      ],
+      "accuracy_difference": -0.0001329394387001437,
+      "accuracy_ci": [
+        -0.00036936853766617224,
+        0.00010709010339734817
+      ],
+      "corrupted_contribution": 0.001344249028444624,
+      "corrupted_ci": [
+        0.0009733333330970967,
+        0.0017171232231825999
+      ],
+      "clean_contribution": 0.00236472407157295,
+      "clean_ci": [
+        0.0015093233336794546,
+        0.003224889516599115
+      ],
+      "max_decomposition_residual": 4.800847219765814e-16,
+      "conditional_means": {
+        "mA_cor": 0.9765019732003044,
+        "mB_cor": 0.9698255488064741,
+        "mA_cln": 0.9726870890909596,
+        "mB_cln": 0.9697165482561411
+      }
+    },
+    {
+      "tag": "cora_appnp",
+      "p": 0.2,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.2, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.2005502215657312,
+      "margin_difference": -0.016462190780649987,
+      "margin_ci": [
+        -0.017426926475877822,
+        -0.015463786878174648
+      ],
+      "accuracy_difference": -0.04212333825701627,
+      "accuracy_ci": [
+        -0.04288774002954211,
+        -0.04131453101920237
+      ],
+      "corrupted_contribution": -0.0665108553019548,
+      "corrupted_ci": [
+        -0.06750501753686299,
+        -0.06546437517383422
+      ],
+      "clean_contribution": 0.050048664521304805,
+      "clean_ci": [
+        0.048856769066670976,
+        0.051226441436791496
+      ],
+      "max_decomposition_residual": 2.8449465006019636e-16,
+      "conditional_means": {
+        "mA_cor": -0.9976025077277239,
+        "mB_cor": -0.6660071699205748,
+        "mA_cln": 0.9771621644711099,
+        "mB_cln": 0.914523957535862
+      }
+    },
+    {
+      "tag": "dblp_appnp",
+      "p": 0.1,
+      "initialization": "truth",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.1, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09967846593385307,
+      "margin_difference": -4.9512532269258e-05,
+      "margin_ci": [
+        -0.00023389351281521737,
+        0.0001383511249792406
+      ],
+      "accuracy_difference": 8.110987361386269e-05,
+      "accuracy_ci": [
+        4.0918115345507184e-05,
+        0.00012251827998643959
+      ],
+      "corrupted_contribution": -4.812504185751075e-05,
+      "corrupted_ci": [
+        -0.00010497927472014202,
+        4.960141440761779e-06
+      ],
+      "clean_contribution": -1.3874904117488785e-06,
+      "clean_ci": [
+        -0.0001519596183150939,
+        0.00015639651864564257
+      ],
+      "max_decomposition_residual": 3.9307749763461963e-16,
+      "conditional_means": {
+        "mA_cor": 0.9826547324526247,
+        "mB_cor": 0.983141712490651,
+        "mA_cln": 0.9830157533528938,
+        "mB_cln": 0.9830167409813706
+      }
+    },
+    {
+      "tag": "dblp_appnp",
+      "p": 0.1,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.1, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.09967846593385307,
+      "margin_difference": -0.010466777433669106,
+      "margin_ci": [
+        -0.010596431813052165,
+        -0.010334412033863927
+      ],
+      "accuracy_difference": -0.045213548980678905,
+      "accuracy_ci": [
+        -0.04542904096653916,
+        -0.044984014091327296
+      ],
+      "corrupted_contribution": -0.07512680836432745,
+      "corrupted_ci": [
+        -0.07543110491608347,
+        -0.07479230243306803
+      ],
+      "clean_contribution": 0.06466003093065835,
+      "clean_ci": [
+        0.06431715779943853,
+        0.06497812356697867
+      ],
+      "max_decomposition_residual": 3.469446951953614e-16,
+      "conditional_means": {
+        "mA_cor": -0.999055514061055,
+        "mB_cor": -0.24536069136665323,
+        "mA_cln": 0.984739933248548,
+        "mB_cln": 0.9129188038743399
+      }
+    },
+    {
+      "tag": "dblp_appnp",
+      "p": 0.2,
+      "initialization": "truth",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.2, 'couple', 0.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.19999370490533144,
+      "margin_difference": -7.77946121406925e-05,
+      "margin_ci": [
+        -0.00022563214133995032,
+        6.628532873360824e-05
+      ],
+      "accuracy_difference": 0.00018279986441334883,
+      "accuracy_ci": [
+        0.00013437605927073422,
+        0.00023195002663309552
+      ],
+      "corrupted_contribution": -0.0007005685328343034,
+      "corrupted_ci": [
+        -0.0007717132741033555,
+        -0.000630133342198384
+      ],
+      "clean_contribution": 0.0006227739206936202,
+      "clean_ci": [
+        0.0005208207963088239,
+        0.000726604748716498
+      ],
+      "max_decomposition_residual": 4.0700949555105836e-16,
+      "conditional_means": {
+        "mA_cor": 0.9850571917911469,
+        "mB_cor": 0.988559870102599,
+        "mA_cln": 0.989361225505454,
+        "mB_cln": 0.9885829157906986
+      }
+    },
+    {
+      "tag": "dblp_appnp",
+      "p": 0.2,
+      "initialization": "coupled",
+      "q": null,
+      "depth": 20,
+      "source_cell": "('sweep', 0.2, 'couple', 1.0, None)",
+      "n_realizations": 100,
+      "realized_corruption": 0.19999370490533144,
+      "margin_difference": -0.015381855749114175,
+      "margin_ci": [
+        -0.015545689463788622,
+        -0.015222512894029164
+      ],
+      "accuracy_difference": -0.05002106435523704,
+      "accuracy_ci": [
+        -0.05025139218439784,
+        -0.049794192775168264
+      ],
+      "corrupted_contribution": -0.09462211578729325,
+      "corrupted_ci": [
+        -0.09493358025727477,
+        -0.0942943793605721
+      ],
+      "clean_contribution": 0.0792402600381791,
+      "clean_ci": [
+        0.07898515843332618,
+        0.07949744673012836
+      ],
+      "max_decomposition_residual": 3.608224830031759e-16,
+      "conditional_means": {
+        "mA_cor": -0.9995252855499851,
+        "mB_cor": -0.5263902875853155,
+        "mA_cln": 0.9925564201704724,
+        "mB_cln": 0.8935047938825526
+      }
+    }
+  ],
+  "endpoint_contrasts": [
+    {
+      "tag": "cora",
+      "p": 0.1,
+      "depth": 20,
+      "coupled_minus_truth": -0.0219150686747107,
+      "ci": [
+        -0.02251724213765907,
+        -0.02132942505140631
+      ]
+    },
+    {
+      "tag": "cora",
+      "p": 0.2,
+      "depth": 20,
+      "coupled_minus_truth": -0.03451608537779138,
+      "ci": [
+        -0.0351878686339685,
+        -0.03382927145017883
+      ]
+    },
+    {
+      "tag": "cora_appnp",
+      "p": 0.1,
+      "depth": 20,
+      "coupled_minus_truth": -0.010448325170780998,
+      "ci": [
+        -0.011069373679147135,
+        -0.009804097739877168
+      ]
+    },
+    {
+      "tag": "cora_appnp",
+      "p": 0.2,
+      "depth": 20,
+      "coupled_minus_truth": -0.020171163880667562,
+      "ci": [
+        -0.02105890026767149,
+        -0.019279335768997315
+      ]
+    },
+    {
+      "tag": "dblp_appnp",
+      "p": 0.1,
+      "depth": 20,
+      "coupled_minus_truth": -0.010417264901399851,
+      "ci": [
+        -0.010574444040097924,
+        -0.010263365090317703
+      ]
+    },
+    {
+      "tag": "dblp_appnp",
+      "p": 0.2,
+      "depth": 20,
+      "coupled_minus_truth": -0.015304061136973485,
+      "ci": [
+        -0.015490716153219116,
+        -0.015114644173254876
+      ]
+    }
+  ]
+}

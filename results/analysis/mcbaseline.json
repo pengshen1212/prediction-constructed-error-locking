@@ -1,0 +1,134 @@
+{
+ "cora": {
+  "criterion_flows": 3116,
+  "mc_n5": {
+   "resolution": 0.206,
+   "accuracy": 0.972
+  },
+  "mc_n10": {
+   "resolution": 0.29,
+   "accuracy": 0.995
+  },
+  "mc_n20": {
+   "resolution": 0.399,
+   "accuracy": 0.998
+  },
+  "mc_n50": {
+   "resolution": 0.538,
+   "accuracy": 1.0
+  },
+  "mc_n100": {
+   "resolution": 0.637,
+   "accuracy": 1.0
+  },
+  "mc_n35": {
+   "resolution": 0.485,
+   "accuracy": 0.999
+  },
+  "criterion_C_coverage": 0.875,
+  "criterion_strict_coverage": 0.375,
+  "criterion_falseP_N": [
+   0,
+   0
+  ]
+ },
+ "dblp": {
+  "criterion_flows": 4124,
+  "mc_n5": {
+   "resolution": 0.868,
+   "accuracy": 1.0
+  },
+  "mc_n10": {
+   "resolution": 0.898,
+   "accuracy": 1.0
+  },
+  "mc_n20": {
+   "resolution": 0.916,
+   "accuracy": 1.0
+  },
+  "mc_n50": {
+   "resolution": 0.92,
+   "accuracy": 1.0
+  },
+  "mc_n100": {
+   "resolution": 0.92,
+   "accuracy": 1.0
+  },
+  "mc_n46": {
+   "resolution": 0.92,
+   "accuracy": 1.0
+  },
+  "criterion_C_coverage": 0.13253012048192772,
+  "criterion_strict_coverage": 0.0,
+  "criterion_falseP_N": [
+   0,
+   0
+  ]
+ },
+ "cora_appnp": {
+  "criterion_flows": 3116,
+  "mc_n5": {
+   "resolution": 0.123,
+   "accuracy": 0.966
+  },
+  "mc_n10": {
+   "resolution": 0.177,
+   "accuracy": 0.991
+  },
+  "mc_n20": {
+   "resolution": 0.274,
+   "accuracy": 0.999
+  },
+  "mc_n50": {
+   "resolution": 0.426,
+   "accuracy": 1.0
+  },
+  "mc_n100": {
+   "resolution": 0.516,
+   "accuracy": 1.0
+  },
+  "mc_n35": {
+   "resolution": 0.373,
+   "accuracy": 1.0
+  },
+  "criterion_C_coverage": 0.14705882352941177,
+  "criterion_strict_coverage": 0.0,
+  "criterion_falseP_N": [
+   0,
+   0
+  ]
+ },
+ "dblp_appnp": {
+  "criterion_flows": 4124,
+  "mc_n5": {
+   "resolution": 0.511,
+   "accuracy": 1.0
+  },
+  "mc_n10": {
+   "resolution": 0.576,
+   "accuracy": 1.0
+  },
+  "mc_n20": {
+   "resolution": 0.606,
+   "accuracy": 1.0
+  },
+  "mc_n50": {
+   "resolution": 0.613,
+   "accuracy": 1.0
+  },
+  "mc_n100": {
+   "resolution": 0.614,
+   "accuracy": 1.0
+  },
+  "mc_n46": {
+   "resolution": 0.613,
+   "accuracy": 1.0
+  },
+  "criterion_C_coverage": 0.0,
+  "criterion_strict_coverage": 0.0,
+  "criterion_falseP_N": [
+   0,
+   0
+  ]
+ }
+}

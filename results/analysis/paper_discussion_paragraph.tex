@@ -1,0 +1,23 @@
+% 讨论段（替代独立正文小节）：放在 §5 "Propagation Extension and
+% Limitations" 末尾、"Reproducibility" 段之前。修订版用。
+% 定位：一句承认 + 边界声明 + 附录指针。不进摘要与贡献列表。
+
+\paragraph{Does the mechanism support prediction?}
+A natural question is whether the mechanistic decomposition
+above---isolation fidelity, thinning asymmetry, initialization
+coupling---translates into a prediction or certification method.
+We tested this under a frozen protocol (calibration on shallow
+configurations, predictions written before evaluation, an
+independent confirmation setting), together with two-sided
+computable certificates and budget-matched Monte Carlo baselines;
+the full account is in Appendix~\ref{app:signpred}. The outcome
+delimits the claim rather than extending it: the simple frozen
+rule extrapolates more stably than the refined variant in the
+tested settings, but its advantage over a constant-sign baseline
+is demonstrated only on the development settings, the independent
+confirmation setting (which contains no positive configurations)
+tests only negative-direction prediction, and budget-matched
+direct Monte Carlo matches the certificates everywhere. The
+mechanism thus explains and delimits the observed downstream
+directions; it does not by itself deliver a prediction or
+certification method of general advantage.

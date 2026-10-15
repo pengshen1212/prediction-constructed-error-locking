@@ -1,0 +1,58 @@
+% 干预实验的正文插入件（修订版谱实验部分；替换重复验证处）。
+% 一条短推论 + 一张双面板图。图文件：figures/depint_final.png
+% （需复制入论文图目录）。τ 口径与 depint_figure.py 的修正拟合一致。
+
+\begin{corollary}[Dependency interpolation at fixed marginals]
+\label{cor:depint}
+Fix the hypergraph, labels, channel rate $p$, per-edge rule, and
+linear operator. Assign each hyperedge independently and uniformly
+to one of $K$ independent node-prediction copies, so that two
+distinct edges share a copy with probability $\tau=1/K$ and the
+per-edge error marginals are unchanged. Writing $\Delta B$ for the
+resulting error operator,
+\[
+\mathbb E\,\|\Delta B-\mathbb E\,\Delta B\|_F^{2}
+= V_0+\tau\,C_1,\qquad
+V_0=\sum_e \widehat{ph}_e(1-\widehat{ph}_e),
+\]
+\[
+C_1=\sum_{e\cap f\neq\emptyset}
+\mathrm{Cov}_1(\delta_e,\delta_f)\,
+\frac{|e\cap f|^{2}}{k_e k_f},
+\]
+where $\mathrm{Cov}_1$ is the covariance under a single shared
+copy; disjoint pairs contribute exactly zero, so the entire
+correlated excess enters through shared nodes. The endpoint
+$\tau=0$ (independent per-edge errors) recovers model~B's law.
+\end{corollary}
+
+\paragraph{Verification.}
+Across three synthetic seeds and the Cora and DBLP structures
+(ten structure--rate combinations), the measured centered energy
+follows the predicted line: regression of the six grouping points
+($\tau\in\{1,\tfrac12,\dots,\tfrac1{32}\}$) gives intercepts and
+slopes within Monte-Carlo error of the closed forms $V_0$ and
+$C_1$ ($R^2=0.988$--$1.000$), and the fitted intercept at
+$\tau\to0$ agrees with two independent $\tau=0$ estimates (direct
+per-edge sampling and model~B's flip construction).
+Figure~\ref{fig:depint}(left) shows the normalized excess
+$(V_K-V_0)/C_1$ against $\tau$ with Monte-Carlo error bars; all
+combinations collapse onto the line $y=\tau$. The centered
+spectral norm (Figure~\ref{fig:depint}, right) decreases
+monotonically in $\tau$ in every tested combination and
+approaches the independent-channel level---an empirical
+observation for which we offer no monotonicity derivation; the
+affine law concerns second-order energy only.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{depint_final.png}
+\caption{Dependency intervention at fixed per-edge marginals.
+Left: centered Frobenius-energy excess $(V_K-V_0)/C_1$ versus the
+copy-sharing probability $\tau$ (synthetic, Cora, DBLP; error
+bars are 95\% Monte-Carlo intervals); the dashed line is the
+predicted $y=\tau$. Right: centered spectral norm normalized to
+its $\tau=1$ value; $\times$ marks the independent model~B
+baseline at $\tau=0$.}
+\label{fig:depint}
+\end{figure}

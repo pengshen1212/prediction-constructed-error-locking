@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-11",
+  "runtime": {
+    "python": "3.12.3 (Anaconda, conda-forge)",
+    "torch": "2.5.1+cu121",
+    "torch_geometric": "2.7.0",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 6 GiB"
+  },
+  "repositories": {
+    "IDGL": {
+      "url": "https://github.com/hugochan/IDGL",
+      "commit": "08129c596a574bef6d34b72ab745dd19c683a6d4",
+      "clean_at_capture": true
+    },
+    "Pro-GNN": {
+      "url": "https://github.com/ChandlerBang/Pro-GNN",
+      "commit": "90e11956bf8145dc2ff441fc9923bc95b535f289",
+      "clean_at_capture": true
+    },
+    "DeepRobust": {
+      "url": "https://github.com/DSE-MSU/DeepRobust",
+      "commit": "92ad433645fef68c8e3d74458451842323809bf6",
+      "clean_at_capture": true
+    }
+  },
+  "observer_changes": {
+    "IDGL": "No source modifications. The pinned Cora config completed at best validation epoch 623 and official test accuracy 0.844. A runtime trace observer captures test-epoch locals from the saved best checkpoint. Compatibility shims provide yaml.FullLoader for PyYAML's removed implicit-loader API and add the official src directory to sys.path.",
+    "Pro-GNN": "No training-source modifications. Runtime wrappers record fit indices and the validation-selected graph/logits immediately before the official test method evaluates them. Runtime compatibility aliases scipy.linalg.triu to numpy.triu for the pinned DeepRobust/Gensim dependency; the official launcher's --epoch typo is corrected to the parser's --epochs spelling."
+  },
+  "completed_runs": {
+    "IDGL": {
+      "seed": 42,
+      "official_test_accuracy": 0.844,
+      "best_validation_epoch": 623,
+      "relation_capture": "results/raw/idgl_seed-42.npz",
+      "relation_metrics": "results/summary/audit.json"
+    },
+    "Pro-GNN": {
+      "seed": 10,
+      "dataset": "Cora largest connected component (2,485 nodes)",
+      "attack": "Meta-Self, 15% perturbation",
+      "epochs": 1000,
+      "training_seconds": 12737.199,
+      "official_test_accuracy": 0.7605633802816901,
+      "test_nodes": 1988,
+      "relation_capture": "results/raw/prognn_seed-10.npz",
+      "relation_metrics": "results/summary/audit.json",
+      "post_test_wrapper_status": "Official training, observer capture, and official test completed. The wrapper then exited while exporting optional input graphs because a preprocessed adjacency was a Tensor rather than a SciPy object. The captured checkpoint relation/logits remain valid; the export converter was fixed and regression-tested without retraining."
+    }
+  },
+  "sha256": {
+    "results/raw/idgl_seed-42.npz": "be58c9d9f4dc43137ca5e30d967a71d1947daf423a315b382c73e43e5f26ba1a",
+    "results/raw/prognn_seed-10.npz": "e1676f2538cc196c39cf1be401c45b5eab72266f9cfeffceb752b6d6c12c06d8",
+    "results/summary/audit.json": "5c453c52e69358cc65c9a09b4abc09f4e86cee32a1ccba400285f74f164f32ce",
+    "results/summary/per_node.csv": "f0248e019b8d7bf9697307e323cb247a2760c80b05fe178c18d9fed4e46ee85b"
+  },
+  "status": "Both official reference runs and one-step relation audits complete. One prespecified seed per method; results are descriptive instance audits, not estimates over training randomness."
+}

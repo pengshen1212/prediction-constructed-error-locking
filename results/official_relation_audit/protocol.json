@@ -1,0 +1,63 @@
+{
+  "protocol_id": "paper2-official-relation-audit-v1",
+  "status": "frozen-before-audit-results",
+  "date": "2026-10-11",
+  "dataset": "Cora",
+  "methods": {
+    "IDGL": {
+      "repository": "https://github.com/hugochan/IDGL",
+      "commit": "08129c596a574bef6d34b72ab745dd19c683a6d4",
+      "config": "src/config/cora/idgl.yml",
+      "split": "official Planetoid Cora split in the repository data loader",
+      "training_seed_values": [42, 448, 854],
+      "reference_split_seed": 42
+    },
+    "Pro-GNN": {
+      "repository": "https://github.com/ChandlerBang/Pro-GNN",
+      "commit": "90e11956bf8145dc2ff441fc9923bc95b535f289",
+      "dependency_repository": "https://github.com/DSE-MSU/DeepRobust",
+      "config": "scripts/meta/cora_meta.sh",
+      "attack": "meta",
+      "perturbation_rate": 0.15,
+      "official_arguments": {
+        "seed": 10,
+        "alpha": 0.0005,
+        "beta": 1.5,
+        "gamma": 1.0,
+        "lambda": 0.001,
+        "learning_rate": 0.0005,
+        "epochs": 1000
+      },
+      "launcher_correction": "The checked-in shell uses --epoch, but train.py defines --epochs; invoke the parser's accepted spelling while preserving the intended 1000-epoch setting.",
+      "training_seed_values": [10, 11, 12],
+      "split": "official Pro-GNN Cora split"
+    }
+  },
+  "relation_probe": {
+    "source": "argmax of full-node logits from each selected official checkpoint",
+    "kernel": "row-normalize the exact nonnegative aggregation relation used at evaluation",
+    "steps": [1, 2, 5, 10],
+    "certificate": "K_power[u, source_class[u]] > 0.5",
+    "primary_population": "official test indices",
+    "outcomes": [
+      "certificate_coverage",
+      "corrected_initial_errors",
+      "harmful_correct_to_wrong_changes",
+      "wrong_to_wrong_changes",
+      "all_class_changes"
+    ],
+    "normal_performance_gate": "official test accuracy is reported separately and must be checked against the paper/repository protocol before relation claims are promoted"
+  },
+  "inference_limit": "This is a frozen learned-relation probe. Only the one-step argmax is equivalent to one nonnegative aggregation of the hard source labels; K powers are a diagnostic stress test, not the official nonlinear GNN forward pass.",
+  "seeds_may_be_reduced_only_for_runtime": true,
+  "seed_reduction_rule": "If the third seed cannot be completed within the practical runtime, retain all completed runs, report the reduced n, and make no population-level uncertainty claim.",
+  "test_label_use": "test labels are used only to score correction and harmful-change outcomes; never for training, tuning, model selection, threshold choice or audit filtering",
+  "execution": {
+    "status": "completed-single-seed-per-method",
+    "seed_reduction": "Only the prespecified reference run was completed for each method because Pro-GNN required 12,737 seconds for 1,000 epochs. No multi-seed or population-level uncertainty claim is made.",
+    "completed": {
+      "IDGL": {"seed": 42, "official_test_accuracy": 0.844, "test_nodes": 1000},
+      "Pro-GNN": {"seed": 10, "official_test_accuracy": 0.7605633802816901, "test_nodes": 1988, "epochs": 1000}
+    }
+  }
+}

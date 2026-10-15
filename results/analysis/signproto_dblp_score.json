@@ -1,0 +1,108 @@
+{
+ "tag": "dblp",
+ "nu_observed": {
+  "0.1|2": 0.002435581992018543,
+  "0.1|5": 0.003480417607979569,
+  "0.1|10": 0.0024988328147880212,
+  "0.1|20": 0.004787496950985126,
+  "0.2|2": 0.0065892611586828576,
+  "0.2|5": 0.012661637231500045,
+  "0.2|10": 0.0170996391158611,
+  "0.2|20": 0.018061072528237576
+ },
+ "nu_ratio_max": 0.08588837877998165,
+ "summary_strict": {
+  "nP": 0,
+  "nN": 0,
+  "falseP": 0,
+  "falseN": 0,
+  "cert_on_ambiguous": 0,
+  "n_unambiguous": 83,
+  "covered": 0,
+  "coverage": 0.0
+ },
+ "summary_C": {
+  "nP": 0,
+  "nN": 11,
+  "falseP": 0,
+  "falseN": 0,
+  "cert_on_ambiguous": 0,
+  "n_unambiguous": 83,
+  "covered": 11,
+  "coverage": 0.13253012048192772
+ },
+ "brackets": [
+  {
+   "p": 0.1,
+   "T": 2,
+   "P_hi": null,
+   "N_lo": 0.7,
+   "width": null,
+   "phi_meas": 0.05872617735734913,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 5,
+   "P_hi": null,
+   "N_lo": 0.8,
+   "width": null,
+   "phi_meas": 0.20374262909982604,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 10,
+   "P_hi": null,
+   "N_lo": 0.9,
+   "width": null,
+   "phi_meas": 0.350821547488971,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 20,
+   "P_hi": null,
+   "N_lo": 0.9,
+   "width": null,
+   "phi_meas": 0.4873244919747366,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 2,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": 0.04070808412391846,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 5,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": 0.14409139027497392,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 10,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": 0.25173893031819217,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 20,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": 0.3548332554701354,
+   "bracket_contains_meas": null
+  }
+ ]
+}

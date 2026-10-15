@@ -1,0 +1,462 @@
+{
+ "protocol": "real cross-fit prototype predictions construct relations and/or initialization; every node's prediction comes from a fold that excluded it (held-out); unit-weight APPNP alpha=0.9, T=20; structures: original (all edges), hard same-predicted-class filter, soft cross-class weights (max predicted-class fraction); initializations: coupled (P1), decoupled (independent same-quality P2), truth, independent rate-matched, soft-argmax (hard structure only, demonstrates locking beyond one-hot)",
+ "seeds": {
+  "graph": 100,
+  "init": 300,
+  "indep": 500
+ },
+ "tags": {
+  "cora": {
+   "n_realizations": 20,
+   "cells": [
+    {
+     "structure": "hard",
+     "init": "coupled",
+     "acc0": 0.6850258493353028,
+     "accT": 0.6850258493353028,
+     "corrected": 0.0,
+     "wrong_changed": 0.0,
+     "net": 0.0,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "decoupled",
+     "acc0": 0.6861890694239292,
+     "accT": 0.6889032496307237,
+     "corrected": 0.0036927621861152136,
+     "wrong_changed": 0.0009785819793205319,
+     "net": 0.002714180206794481,
+     "corrected_ci": [
+      0.003231166912850812,
+      0.004136355243722302
+     ],
+     "wrong_changed_ci": [
+      0.0007570162481536189,
+      0.0012186115214180208
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "indep",
+     "acc0": 0.684102658788774,
+     "accT": 0.731185376661743,
+     "corrected": 0.05454209748892171,
+     "wrong_changed": 0.007459379615952733,
+     "net": 0.04708271787296903,
+     "corrected_ci": [
+      0.053009601181683894,
+      0.056056591580502226
+     ],
+     "wrong_changed_ci": [
+      0.006887001477104875,
+      0.008105612998522896
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "softargmax",
+     "acc0": 0.6850258493353028,
+     "accT": 0.6850258493353028,
+     "corrected": 0.0,
+     "wrong_changed": 0.0,
+     "net": 0.0,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "truth",
+     "acc0": 1.0,
+     "accT": 0.985709010339734,
+     "corrected": 0.0,
+     "wrong_changed": 0.014290989660265879,
+     "net": -0.014290989660265985,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.013847858197932054,
+      0.01475258493353028
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "coupled",
+     "acc0": 0.6850258493353028,
+     "accT": 0.718943870014771,
+     "corrected": 0.04425775480059084,
+     "wrong_changed": 0.010339734121122598,
+     "net": 0.03391802067946825,
+     "corrected_ci": [
+      0.04375923190546528,
+      0.04473781388478582
+     ],
+     "wrong_changed_ci": [
+      0.010025849335302808,
+      0.010616691285081241
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "decoupled",
+     "acc0": 0.6861890694239292,
+     "accT": 0.7200701624815362,
+     "corrected": 0.04407311669128507,
+     "wrong_changed": 0.010192023633677992,
+     "net": 0.033881093057607004,
+     "corrected_ci": [
+      0.04364844903988184,
+      0.04449778434268833
+     ],
+     "wrong_changed_ci": [
+      0.00982274741506647,
+      0.010542836041358937
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "indep",
+     "acc0": 0.684102658788774,
+     "accT": 0.7560745937961595,
+     "corrected": 0.07998522895125554,
+     "wrong_changed": 0.008013293943870013,
+     "net": 0.07197193500738552,
+     "corrected_ci": [
+      0.0789327917282127,
+      0.08109305760709011
+     ],
+     "wrong_changed_ci": [
+      0.007496307237813883,
+      0.00851181683899557
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "truth",
+     "acc0": 1.0,
+     "accT": 0.9793205317577547,
+     "corrected": 0.0,
+     "wrong_changed": 0.0206794682422452,
+     "net": -0.020679468242245314,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.0206794682422452,
+      0.0206794682422452
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "coupled",
+     "acc0": 0.6850258493353028,
+     "accT": 0.7189807976366321,
+     "corrected": 0.0417466765140325,
+     "wrong_changed": 0.007791728212703103,
+     "net": 0.03395494830132939,
+     "corrected_ci": [
+      0.041248153618906935,
+      0.04230059084194978
+     ],
+     "wrong_changed_ci": [
+      0.007422451994091579,
+      0.008179468242245198
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "decoupled",
+     "acc0": 0.6861890694239292,
+     "accT": 0.719903988183161,
+     "corrected": 0.041672821270310204,
+     "wrong_changed": 0.007957902511078285,
+     "net": 0.03371491875923183,
+     "corrected_ci": [
+      0.041229689807976366,
+      0.04211595273264402
+     ],
+     "wrong_changed_ci": [
+      0.007662481536189067,
+      0.008253323485967504
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "indep",
+     "acc0": 0.684102658788774,
+     "accT": 0.7577917282127031,
+     "corrected": 0.08135155096011816,
+     "wrong_changed": 0.0076624815361890685,
+     "net": 0.07368906942392917,
+     "corrected_ci": [
+      0.08013293943870015,
+      0.08268094534711964
+     ],
+     "wrong_changed_ci": [
+      0.007218888478581979,
+      0.008106074593796158
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "truth",
+     "acc0": 1.0,
+     "accT": 0.9780834564254061,
+     "corrected": 0.0,
+     "wrong_changed": 0.0219165435745938,
+     "net": -0.02191654357459394,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.02176883308714919,
+      0.02206425406203841
+     ]
+    }
+   ]
+  },
+  "dblp": {
+   "n_realizations": 10,
+   "cells": [
+    {
+     "structure": "hard",
+     "init": "coupled",
+     "acc0": 0.763200329281875,
+     "accT": 0.763200329281875,
+     "corrected": 0.0,
+     "wrong_changed": 0.0,
+     "net": 0.0,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "decoupled",
+     "acc0": 0.762996949300276,
+     "accT": 0.7640550094426419,
+     "corrected": 0.0012469129824221588,
+     "wrong_changed": 0.0001888528400561716,
+     "net": 0.0010580601423659797,
+     "corrected_ci": [
+      0.001137898891094862,
+      0.0013461817829645054
+     ],
+     "wrong_changed_ci": [
+      0.00014769260568495471,
+      0.00022759188417025814
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "indep",
+     "acc0": 0.7622754346036512,
+     "accT": 0.8402716575468501,
+     "corrected": 0.08513631301147645,
+     "wrong_changed": 0.007140090068277564,
+     "net": 0.07799622294319886,
+     "corrected_ci": [
+      0.0845696939615515,
+      0.08571019563217278
+     ],
+     "wrong_changed_ci": [
+      0.007021451745678175,
+      0.007258728390876955
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "softargmax",
+     "acc0": 0.763200329281875,
+     "accT": 0.763200329281875,
+     "corrected": 0.0,
+     "wrong_changed": 0.0,
+     "net": 0.0,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "structure": "hard",
+     "init": "truth",
+     "acc0": 1.0,
+     "accT": 0.9894823495230256,
+     "corrected": 0.0,
+     "wrong_changed": 0.01051765047697448,
+     "net": -0.010517650476974394,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.010464384291317613,
+      0.010570977192387778
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "coupled",
+     "acc0": 0.763200329281875,
+     "accT": 0.8527068907074717,
+     "corrected": 0.11666747373008572,
+     "wrong_changed": 0.027160912304488888,
+     "net": 0.08950656142559676,
+     "corrected_ci": [
+      0.11656336254902913,
+      0.11678369086242794
+     ],
+     "wrong_changed_ci": [
+      0.027015640889061065,
+      0.02730382305941601
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "decoupled",
+     "acc0": 0.762996949300276,
+     "accT": 0.8523437121689023,
+     "corrected": 0.11670379158394266,
+     "wrong_changed": 0.027357028715316443,
+     "net": 0.0893467628686263,
+     "corrected_ci": [
+      0.11650283279260085,
+      0.1169023897147838
+     ],
+     "wrong_changed_ci": [
+      0.027248075153745582,
+      0.027446612754830273
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "indep",
+     "acc0": 0.7622754346036512,
+     "accT": 0.9057890659047988,
+     "corrected": 0.17990169967556052,
+     "wrong_changed": 0.03638806837441286,
+     "net": 0.14351363130114758,
+     "corrected_ci": [
+      0.17886543024550866,
+      0.1808241731635272
+     ],
+     "wrong_changed_ci": [
+      0.035942569367100864,
+      0.036879630526366766
+     ]
+    },
+    {
+     "structure": "original",
+     "init": "truth",
+     "acc0": 1.0,
+     "accT": 0.9414314076800154,
+     "corrected": 0.0,
+     "wrong_changed": 0.0585685923199845,
+     "net": -0.05856859231998457,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.0585685923199845,
+      0.0585685923199845
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "coupled",
+     "acc0": 0.763200329281875,
+     "accT": 0.85,
+     "corrected": 0.11144496634545542,
+     "wrong_changed": 0.024645295627330394,
+     "net": 0.086799670718125,
+     "corrected_ci": [
+      0.11131900392232821,
+      0.11155149871676917
+     ],
+     "wrong_changed_ci": [
+      0.024533920875502397,
+      0.02475424918890127
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "decoupled",
+     "acc0": 0.762996949300276,
+     "accT": 0.8497820928768582,
+     "corrected": 0.11164108275628297,
+     "wrong_changed": 0.02485593917970074,
+     "net": 0.08678514357658229,
+     "corrected_ci": [
+      0.11146433586751248,
+      0.11180572369376784
+     ],
+     "wrong_changed_ci": [
+      0.024746985618129873,
+      0.024981841073071522
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "indep",
+     "acc0": 0.7622754346036512,
+     "accT": 0.9077042273981888,
+     "corrected": 0.17919955450099267,
+     "wrong_changed": 0.0337707617064549,
+     "net": 0.14542879279453758,
+     "corrected_ci": [
+      0.1781560215001695,
+      0.18006882233305893
+     ],
+     "wrong_changed_ci": [
+      0.03339547721659968,
+      0.034165476248123584
+     ]
+    },
+    {
+     "structure": "soft",
+     "init": "truth",
+     "acc0": 1.0,
+     "accT": 0.9452181492421676,
+     "corrected": 0.0,
+     "wrong_changed": 0.054781850757832554,
+     "net": -0.05478185075783237,
+     "corrected_ci": [
+      0.0,
+      0.0
+     ],
+     "wrong_changed_ci": [
+      0.054735848142947074,
+      0.05483027456297516
+     ]
+    }
+   ]
+  }
+ }
+}

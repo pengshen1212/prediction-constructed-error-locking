@@ -1,0 +1,32 @@
+C:\Users\Peng1\OneDrive\文档\ChatGPT\hypergraph\experiments\prob2-relation-error\downstream_v2.py:32: DeprecationWarning: Please import `csr_matrix` from the `scipy.sparse` namespace; the `scipy.sparse.csr` namespace is deprecated and will be removed in SciPy 2.0.0.
+  feats = pickle.load(f)
+λ_max=44.6, h=0.0224
+Z_0 信号: acc=1.000, signal=1.000
+  Clean T=1: margin=0.9753, acc=1.000, signal=0.994
+  Clean T=2: margin=0.9564, acc=0.999, signal=0.987
+  Clean T=5: margin=0.9116, acc=0.995, signal=0.960
+  Clean T=10: margin=0.8595, acc=0.986, signal=0.914
+  Clean T=20: margin=0.7960, acc=0.967, signal=0.840
+
+--- p=0.05 ---
+  T=1: margin A=0.9781 B=0.9785 (diff -0.00041 CI [-0.00054,-0.00027]); acc A=1.000 B=1.000 (diff +0.0000 CI [+0.0000,+0.0000])
+  T=2: margin A=0.9617 B=0.9613 (diff +0.00040 CI [+0.00015,+0.00063]); acc A=0.999 B=0.999 (diff +0.0001 CI [+0.0000,+0.0001])
+  T=5: margin A=0.9214 B=0.9204 (diff +0.00102 CI [+0.00055,+0.00146]); acc A=0.996 B=0.996 (diff -0.0002 CI [-0.0003,-0.0001])
+  T=10: margin A=0.8742 B=0.8721 (diff +0.00211 CI [+0.00145,+0.00272]); acc A=0.988 B=0.988 (diff -0.0002 CI [-0.0005,-0.0000])
+  T=20: margin A=0.8157 B=0.8109 (diff +0.00485 CI [+0.00403,+0.00564]); acc A=0.971 B=0.970 (diff +0.0008 CI [+0.0005,+0.0012])
+
+--- p=0.10 ---
+  T=1: margin A=0.9808 B=0.9813 (diff -0.00052 CI [-0.00069,-0.00035]); acc A=1.000 B=1.000 (diff +0.0000 CI [+0.0000,+0.0000])
+  T=2: margin A=0.9660 B=0.9658 (diff +0.00018 CI [-0.00016,+0.00052]); acc A=0.999 B=0.999 (diff +0.0000 CI [-0.0000,+0.0001])
+  T=5: margin A=0.9308 B=0.9291 (diff +0.00174 CI [+0.00121,+0.00228]); acc A=0.997 B=0.997 (diff -0.0001 CI [-0.0002,+0.0001])
+  T=10: margin A=0.8877 B=0.8838 (diff +0.00385 CI [+0.00312,+0.00461]); acc A=0.990 B=0.991 (diff -0.0007 CI [-0.0009,-0.0004])
+  T=20: margin A=0.8340 B=0.8262 (diff +0.00783 CI [+0.00675,+0.00884]); acc A=0.975 B=0.975 (diff +0.0002 CI [-0.0003,+0.0006])
+
+--- p=0.20 ---
+  T=1: margin A=0.9846 B=0.9859 (diff -0.00126 CI [-0.00143,-0.00109]); acc A=1.000 B=1.000 (diff +0.0000 CI [+0.0000,+0.0000])
+  T=2: margin A=0.9734 B=0.9737 (diff -0.00035 CI [-0.00067,-0.00003]); acc A=0.999 B=0.999 (diff -0.0001 CI [-0.0002,-0.0000])
+  T=5: margin A=0.9441 B=0.9437 (diff +0.00041 CI [-0.00016,+0.00101]); acc A=0.998 B=0.998 (diff -0.0002 CI [-0.0004,-0.0001])
+  T=10: margin A=0.9094 B=0.9061 (diff +0.00327 CI [+0.00235,+0.00420]); acc A=0.993 B=0.994 (diff -0.0012 CI [-0.0014,-0.0009])
+  T=20: margin A=0.8642 B=0.8549 (diff +0.00932 CI [+0.00810,+0.01051]); acc A=0.982 B=0.982 (diff -0.0003 CI [-0.0007,+0.0001])
+
+已写出 results/downstream_v2.json

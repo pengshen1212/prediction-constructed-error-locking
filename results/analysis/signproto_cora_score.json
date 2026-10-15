@@ -1,0 +1,108 @@
+{
+ "tag": "cora",
+ "nu_observed": {
+  "0.1|2": 0.00039547668952677473,
+  "0.1|5": 0.00048232241634560413,
+  "0.1|10": 0.000346849354022738,
+  "0.1|20": 0.0010718076100685314,
+  "0.2|2": 0.0005606742250783281,
+  "0.2|5": 0.0007897714626207142,
+  "0.2|10": 0.0006924712494925656,
+  "0.2|20": 0.001022388048046996
+ },
+ "nu_ratio_max": 0.15933953543794988,
+ "summary_strict": {
+  "nP": 0,
+  "nN": 27,
+  "falseP": 0,
+  "falseN": 0,
+  "cert_on_ambiguous": 0,
+  "n_unambiguous": 72,
+  "covered": 27,
+  "coverage": 0.375
+ },
+ "summary_C": {
+  "nP": 9,
+  "nN": 54,
+  "falseP": 0,
+  "falseN": 0,
+  "cert_on_ambiguous": 0,
+  "n_unambiguous": 72,
+  "covered": 63,
+  "coverage": 0.875
+ },
+ "brackets": [
+  {
+   "p": 0.1,
+   "T": 2,
+   "P_hi": null,
+   "N_lo": 0.4,
+   "width": null,
+   "phi_meas": 0.07404197075919475,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 5,
+   "P_hi": 0.0,
+   "N_lo": 0.4,
+   "width": 0.4,
+   "phi_meas": 0.1719326551558158,
+   "bracket_contains_meas": true
+  },
+  {
+   "p": 0.1,
+   "T": 10,
+   "P_hi": 0.1,
+   "N_lo": 0.5,
+   "width": 0.4,
+   "phi_meas": 0.25103934457933214,
+   "bracket_contains_meas": true
+  },
+  {
+   "p": 0.1,
+   "T": 20,
+   "P_hi": 0.1,
+   "N_lo": 0.5,
+   "width": 0.4,
+   "phi_meas": 0.33698181639774566,
+   "bracket_contains_meas": true
+  },
+  {
+   "p": 0.2,
+   "T": 2,
+   "P_hi": null,
+   "N_lo": 0.3,
+   "width": null,
+   "phi_meas": 0.05509148789495621,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 5,
+   "P_hi": 0.0,
+   "N_lo": 0.4,
+   "width": 0.4,
+   "phi_meas": 0.13977566128949404,
+   "bracket_contains_meas": true
+  },
+  {
+   "p": 0.2,
+   "T": 10,
+   "P_hi": 0.0,
+   "N_lo": 0.4,
+   "width": 0.4,
+   "phi_meas": 0.20959950015002354,
+   "bracket_contains_meas": true
+  },
+  {
+   "p": 0.2,
+   "T": 20,
+   "P_hi": 0.1,
+   "N_lo": 0.5,
+   "width": 0.4,
+   "phi_meas": 0.2912488194158309,
+   "bracket_contains_meas": true
+  }
+ ]
+}

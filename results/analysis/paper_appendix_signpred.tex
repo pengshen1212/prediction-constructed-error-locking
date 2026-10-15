@@ -1,0 +1,123 @@
+% 附录：冻结符号预测与可计算证书（完整材料；修订版用）。
+% 位置：现有附录之后。不进正文、摘要、贡献列表。
+% 口径与 signcriterion_note.md §13–§15 一致（终版口径）。
+
+\section{Frozen Sign Prediction and Computable Certificates}
+\label{app:signpred}
+
+This appendix reports, as further validation of the main line, a
+test of how far the mechanistic decomposition supports prediction.
+All sign rates use the 88-point sweep grid ($2$ noise rates
+$\times$ $4$ depths $\times$ $11$ coupling values), restricted to
+$|\Delta|>10^{-3}$; $\Delta$ denotes the mean-margin difference
+$\bar m^{A}_T-\bar m^{B}_T$ under the matched-marginal controls
+of Sec.~2.
+
+\paragraph{Protocol.}
+The protocol has three frozen stages: calibration (rules fitted on
+$p\le0.15$, $T\le10$, coupling endpoints $\varphi\in\{0,1\}$),
+prediction (written to disk before any evaluation run; disjoint
+seed ranges), and evaluation. The coupling $\varphi$ interpolates
+between truth-initialized ($\varphi{=}0$) and corruption-
+initialized ($\varphi{=}1$) readouts: with probability $\varphi$,
+a corrupted node carries the same corrupted label that generated
+the $A$-graph. Four settings are studied: Cora and DBLP under the
+heat filter, and each under the normalized APPNP filter
+($S=D^{-1/2}(A{+}I)D^{-1/2}$, $Z\leftarrow0.9\,SZ+0.1\,Z_0$);
+DBLP/APPNP is excluded from all rule and constant selection and
+serves as the confirmation setting.
+
+\paragraph{Rules.}
+Both rule variants use the exact decomposition
+$E[\Delta]=p\,G+(1-p)\,D$ with the isolation term $1-2\varphi$
+(closed form) and a fitted recovery curve; they differ only in
+whether the clean contrast is mixed in $\varphi$ (v2: $D(\varphi)$
+interpolated between calibrated endpoints; v1: $D\equiv D_{0}$).
+Table~\ref{tab:app-rules} reports margin-sign accuracy together
+with constant-sign and development-majority baselines.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lcccccc}
+\hline
+setting & pos/neg & const-neg & dev-majority & v1 & v2 \\
+\hline
+Cora/heat      & 12/60 & 83\% & 83\% & 99\%  & 100\% \\
+DBLP/heat      & 20/63 & 76\% & 76\% & 86\%  & 98\%  \\
+Cora/APPNP     & 12/56 & 82\% & 82\% & 94\%  & 96\%  \\
+DBLP/APPNP (conf.) & 0/63 & 100\% & 100\% & 100\% & 49\% \\
+\hline
+\end{tabular}
+\caption{Sweep-grid sign accuracy with baselines. The
+confirmation setting contains no positive configurations: a
+constant-negative predictor attains 100\%, so it tests only
+negative-direction prediction; the unmixed variant's advantage
+over constant-negative is demonstrated on the development
+settings (positive-direction accuracy 95--100\%) and its
+extrapolation is not established. Whether the mixed variant's
+failure reflects in-family overfitting or component mismatch in
+this regime is not distinguished.}
+\label{tab:app-rules}
+\end{table}
+
+\paragraph{Component-level facts.}
+Holding uniformly across operators and datasets: (i) conditional
+on isolation under $A$,
+$E[m^A_T(U)\mid W_U{=}1,\ U\ \text{isolated}]=1-2\varphi$
+exactly---the protocol draws the initialization-coupling coin
+independently of the corruption realization, so
+$\Pr[\text{init}\ne y\mid W_U{=}1,\text{isolated}]=\varphi$ and
+an isolated readout is preserved; the unconditional expectation
+carries a remainder bounded by an isolation-probability-weighted
+displacement term (measured deviation $\le0.026$, an empirical
+observation); (ii) the recovery curve $E[m^B_T\mid W_U{=}1]$ is
+linear in $\varphi$ on all four settings.
+
+\paragraph{Two-sided certificates.}
+Replacing fitted terms by instance-computable ones (closed-form
+retention rates, oracle-graph response curves, expectation-
+operator mean field, A-only/B-only simulation audits) yields
+sufficient conditions in both directions:
+$p\,G^{lb}+(1-p)(\hat D-\nu)>0\Rightarrow E[\Delta]>0$, and the
+mirror inequality for $E[\Delta]<0$. Three layers are distinct:
+the implication is mathematical; the model-error slack $\nu$ is
+an assumption audited on single-model realizations (in the
+confirmation stage no component reads the A--B difference, while
+the slack constants were fixed from development-stage results
+that did use difference-based diagnostics); Monte-Carlo
+components carry asymptotic one-sided bounds ($z=3.09$). The grid
+involves $42$ one-sided tail events ($\beta_c,\beta_w$
+two-sided across $16$ cells; $\bar\varepsilon$ and $E[\delta^2]$
+upper-only); their Bonferroni asymptotic nominal failure level is
+about $4.2\%$, and this concerns the MC layer only---certificate
+validity separately requires the mathematical premises and, at
+one tier, the model-error assumption. No finite-sample claim is
+made. On evaluated instances no false certificate was observed
+(abstention included): coverage is $88\%$ on Cora/heat at the
+$(S')$-conditional tier and $38\%$ at the $(S')$-free asymptotic
+conditional tier, $13\%$ on DBLP/heat, $15\%$ on Cora/APPNP, and
+the frozen criterion issues no certificates on DBLP/APPNP---an
+abstention that exposes the coverage limitation rather than
+evidencing soundness.
+
+\paragraph{Budget comparison.}
+Under a reuse-cost model (one operator pair and eleven flows per
+realization cover the sweep grid; depths recorded en route),
+budget-matched direct Monte Carlo shows no demonstrated
+certificate advantage on Cora/heat ($82\%$ vs $88\%$; bootstrap
+CI on the difference $[-0.02,+0.13]$) and higher coverage on the
+other three settings ($100\%$ vs $13\%$; $77\%$ vs $15\%$;
+$100\%$ vs $0\%$).
+
+\paragraph{Correction log and reproducibility.}
+The development history includes three audit-driven corrections
+(a certificate inequality using the wrong one-sided bound; a
+mixed-edge retention formula; a sign error in the recovery
+correction), each exposed by independent recomputation and
+documented in the lab note; all reported numbers are reproducible
+from the frozen scripts (\texttt{sign\_predict.py},
+\texttt{sign\_protocol.py}, \texttt{mc\_baseline.py},
+\texttt{baseline\_fair.py}) with independent audit scripts
+verifying certificate recomputation, scoring, seed disjointness,
+and cross-validation against the paper's original implementation
+(12 endpoint comparisons in agreement).

@@ -1,0 +1,108 @@
+{
+ "tag": "dblp_appnp",
+ "nu_observed": {
+  "0.1|2": 0.007408642556332556,
+  "0.1|5": 0.007870650471942242,
+  "0.1|10": 0.007899906286276681,
+  "0.1|20": 0.007868144483351935,
+  "0.2|2": 0.005673677683080691,
+  "0.2|5": 0.006084581714158155,
+  "0.2|10": 0.006149319473064074,
+  "0.2|20": 0.006166112219237241
+ },
+ "nu_ratio_max": 0.4070132401536821,
+ "summary_strict": {
+  "nP": 0,
+  "nN": 0,
+  "falseP": 0,
+  "falseN": 0,
+  "cert_on_ambiguous": 0,
+  "n_unambiguous": 63,
+  "covered": 0,
+  "coverage": 0.0
+ },
+ "summary_C": {
+  "nP": 0,
+  "nN": 0,
+  "falseP": 0,
+  "falseN": 0,
+  "cert_on_ambiguous": 0,
+  "n_unambiguous": 63,
+  "covered": 0,
+  "coverage": 0.0
+ },
+ "brackets": [
+  {
+   "p": 0.1,
+   "T": 2,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 5,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 10,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.1,
+   "T": 20,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 2,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 5,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 10,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  },
+  {
+   "p": 0.2,
+   "T": 20,
+   "P_hi": null,
+   "N_lo": null,
+   "width": null,
+   "phi_meas": null,
+   "bracket_contains_meas": null
+  }
+ ]
+}

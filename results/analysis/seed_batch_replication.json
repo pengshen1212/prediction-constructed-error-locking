@@ -1,0 +1,531 @@
+{
+ "protocol": "new-seed replication of the core truth/independent/coupled contrasts; seeds base 7000 block, disjoint from the saved evaluation batch (base 5000); same unit-weight operators, alpha=0.9, p in {0.10,0.20}, T=20, 100 realizations per cell; paired bootstrap 2000, seed 99",
+ "base_seed": 7000,
+ "n_real": 100,
+ "n_boot": 2000,
+ "bootstrap_seed": 99,
+ "tags": {
+  "cora": {
+   "cells": [
+    {
+     "tag": "cora",
+     "p": 0.1,
+     "initialization": "truth",
+     "q": null,
+     "depth": 20,
+     "base_seed": 8000,
+     "n_realizations": 100,
+     "realized_corruption": 0.10107459379615953,
+     "margin_difference": 0.008800664190968904,
+     "margin_ci": [
+      0.007659125051347657,
+      0.009917910965737579
+     ],
+     "accuracy_difference": 0.0001624815361890686,
+     "accuracy_ci": [
+      -0.0003435192023633796,
+      0.0006538035450517014
+     ],
+     "corrupted_contribution": 0.016384749598401215,
+     "clean_contribution": -0.007584085407432323,
+     "max_decomposition_residual": 3.2959746043559335e-16
+    },
+    {
+     "tag": "cora",
+     "p": 0.1,
+     "initialization": "coupled",
+     "q": null,
+     "depth": 20,
+     "base_seed": 8000,
+     "n_realizations": 100,
+     "realized_corruption": 0.10107459379615953,
+     "margin_difference": -0.01370822410601172,
+     "margin_ci": [
+      -0.014477504529699575,
+      -0.012921411710965239
+     ],
+     "accuracy_difference": -0.005339734121122598,
+     "accuracy_ci": [
+      -0.005672175036927623,
+      -0.005014771048744463
+     ],
+     "corrupted_contribution": 0.0005121453105225954,
+     "clean_contribution": -0.014220369416534312,
+     "max_decomposition_residual": 2.654126918244515e-16
+    },
+    {
+     "tag": "cora",
+     "p": 0.1,
+     "initialization": "independent",
+     "q": 0.1,
+     "depth": 20,
+     "base_seed": 8050,
+     "n_realizations": 100,
+     "realized_corruption": 0.10060192023633677,
+     "margin_difference": 0.006671830657675233,
+     "margin_ci": [
+      0.005577749081178194,
+      0.007790834463705416
+     ],
+     "accuracy_difference": -0.0005059084194977825,
+     "accuracy_ci": [
+      -0.00094174667651403,
+      -9.97045790251171e-05
+     ],
+     "corrupted_contribution": 0.013855722300898649,
+     "clean_contribution": -0.007183891643223406,
+     "max_decomposition_residual": 3.0010716134398763e-16
+    },
+    {
+     "tag": "cora",
+     "p": 0.2,
+     "initialization": "truth",
+     "q": null,
+     "depth": 20,
+     "base_seed": 9000,
+     "n_realizations": 100,
+     "realized_corruption": 0.20217134416543572,
+     "margin_difference": 0.011022266840185915,
+     "margin_ci": [
+      0.009674561621798465,
+      0.012395116316495255
+     ],
+     "accuracy_difference": -0.000878877400295418,
+     "accuracy_ci": [
+      -0.0013331794682422543,
+      -0.00040611152141800997
+     ],
+     "corrupted_contribution": 0.02490828697916941,
+     "clean_contribution": -0.013886020138983513,
+     "max_decomposition_residual": 3.391384395534658e-16
+    },
+    {
+     "tag": "cora",
+     "p": 0.2,
+     "initialization": "coupled",
+     "q": null,
+     "depth": 20,
+     "base_seed": 9000,
+     "n_realizations": 100,
+     "realized_corruption": 0.20217134416543572,
+     "margin_difference": -0.02371072235097493,
+     "margin_ci": [
+      -0.024672351972499597,
+      -0.02274383316445608
+     ],
+     "accuracy_difference": -0.007226735598227472,
+     "accuracy_ci": [
+      -0.007573947562776955,
+      -0.006879615952732646
+     ],
+     "corrupted_contribution": 0.00019066274688896989,
+     "clean_contribution": -0.023901385097863884,
+     "max_decomposition_residual": 2.2898349882893854e-16
+    },
+    {
+     "tag": "cora",
+     "p": 0.2,
+     "initialization": "independent",
+     "q": 0.2,
+     "depth": 20,
+     "base_seed": 9050,
+     "n_realizations": 100,
+     "realized_corruption": 0.20112259970457902,
+     "margin_difference": 0.008289808285445868,
+     "margin_ci": [
+      0.007260509935919308,
+      0.009374707147400614
+     ],
+     "accuracy_difference": -0.0005723781388478555,
+     "accuracy_ci": [
+      -0.0009305760709010249,
+      -0.00020310192023633916
+     ],
+     "corrupted_contribution": 0.01786657769413758,
+     "clean_contribution": -0.009576769408691696,
+     "max_decomposition_residual": 2.5847379792054426e-16
+    }
+   ],
+   "contrasts": [
+    {
+     "tag": "cora",
+     "p": 0.1,
+     "depth": 20,
+     "coupled_minus_truth_margin": -0.022508888296980622,
+     "coupled_minus_truth_margin_ci": [
+      -0.023026831674657605,
+      -0.021982276707197334
+     ],
+     "coupled_minus_truth_acc": -0.0055022156573116664,
+     "coupled_minus_truth_acc_ci": [
+      -0.005864198670605607,
+      -0.005144017725258493
+     ]
+    },
+    {
+     "tag": "cora",
+     "p": 0.2,
+     "depth": 20,
+     "coupled_minus_truth_margin": -0.034732989191160836,
+     "coupled_minus_truth_margin_ci": [
+      -0.03540273698266474,
+      -0.03407866522320385
+     ],
+     "coupled_minus_truth_acc": -0.006347858197932054,
+     "coupled_minus_truth_acc_ci": [
+      -0.006680299113737079,
+      -0.00601181683899557
+     ]
+    }
+   ]
+  },
+  "cora_appnp": {
+   "cells": [
+    {
+     "tag": "cora_appnp",
+     "p": 0.1,
+     "initialization": "truth",
+     "q": null,
+     "depth": 20,
+     "base_seed": 8000,
+     "n_realizations": 100,
+     "realized_corruption": 0.10107459379615953,
+     "margin_difference": 0.0030368291511708523,
+     "margin_ci": [
+      0.002182146080386502,
+      0.003910630320244175
+     ],
+     "accuracy_difference": -0.00011816838995568624,
+     "accuracy_ci": [
+      -0.0003175775480059007,
+      8.493353028065087e-05
+     ],
+     "corrupted_contribution": 0.000802518091635761,
+     "clean_contribution": 0.0022343110595350693,
+     "max_decomposition_residual": 3.972516759986888e-16
+    },
+    {
+     "tag": "cora_appnp",
+     "p": 0.1,
+     "initialization": "coupled",
+     "q": null,
+     "depth": 20,
+     "base_seed": 8000,
+     "n_realizations": 100,
+     "realized_corruption": 0.10107459379615953,
+     "margin_difference": -0.007784133394046666,
+     "margin_ci": [
+      -0.00871622824664681,
+      -0.006858967938333352
+     ],
+     "accuracy_difference": -0.02991875923190546,
+     "accuracy_ci": [
+      -0.030520864106351554,
+      -0.02935007385524372
+     ],
+     "corrupted_contribution": -0.045106319223807485,
+     "clean_contribution": 0.03732218582976082,
+     "max_decomposition_residual": 5.516420653606247e-16
+    },
+    {
+     "tag": "cora_appnp",
+     "p": 0.1,
+     "initialization": "independent",
+     "q": 0.1,
+     "depth": 20,
+     "base_seed": 8050,
+     "n_realizations": 100,
+     "realized_corruption": 0.10060192023633677,
+     "margin_difference": 0.0018309547182833118,
+     "margin_ci": [
+      0.0011188654047069686,
+      0.002555120874811615
+     ],
+     "accuracy_difference": -0.002141802067946833,
+     "accuracy_ci": [
+      -0.0026070901033973396,
+      -0.0016801144756277816
+     ],
+     "corrupted_contribution": -0.0001621980585493556,
+     "clean_contribution": 0.0019931527768326774,
+     "max_decomposition_residual": 3.920475055707584e-16
+    },
+    {
+     "tag": "cora_appnp",
+     "p": 0.2,
+     "initialization": "truth",
+     "q": null,
+     "depth": 20,
+     "base_seed": 9000,
+     "n_realizations": 100,
+     "realized_corruption": 0.20217134416543572,
+     "margin_difference": 0.0031015124092182156,
+     "margin_ci": [
+      0.0022651079104078916,
+      0.003981623710722046
+     ],
+     "accuracy_difference": -0.00016617429837518017,
+     "accuracy_ci": [
+      -0.00040989660265877833,
+      7.385524372230623e-05
+     ],
+     "corrupted_contribution": 0.001154995701617155,
+     "clean_contribution": 0.0019465167076010625,
+     "max_decomposition_residual": 3.634245682171411e-16
+    },
+    {
+     "tag": "cora_appnp",
+     "p": 0.2,
+     "initialization": "coupled",
+     "q": null,
+     "depth": 20,
+     "base_seed": 9000,
+     "n_realizations": 100,
+     "realized_corruption": 0.20217134416543572,
+     "margin_difference": -0.01674605674620218,
+     "margin_ci": [
+      -0.017567461051698027,
+      -0.01591280844583587
+     ],
+     "accuracy_difference": -0.04245199409158051,
+     "accuracy_ci": [
+      -0.04324972304283605,
+      -0.0416873153618907
+     ],
+     "corrupted_contribution": -0.06682071235619412,
+     "clean_contribution": 0.050074655609991935,
+     "max_decomposition_residual": 3.5388358909926865e-16
+    },
+    {
+     "tag": "cora_appnp",
+     "p": 0.2,
+     "initialization": "independent",
+     "q": 0.2,
+     "depth": 20,
+     "base_seed": 9050,
+     "n_realizations": 100,
+     "realized_corruption": 0.20112259970457902,
+     "margin_difference": 0.001088896861402673,
+     "margin_ci": [
+      0.00034691576065728173,
+      0.0018382279313816873
+     ],
+     "accuracy_difference": -0.004471935007385524,
+     "accuracy_ci": [
+      -0.005369276218611521,
+      -0.0036188146233382674
+     ],
+     "corrupted_contribution": -0.0022212092775461896,
+     "clean_contribution": 0.003310106138948852,
+     "max_decomposition_residual": 2.953366717850514e-16
+    }
+   ],
+   "contrasts": [
+    {
+     "tag": "cora_appnp",
+     "p": 0.1,
+     "depth": 20,
+     "coupled_minus_truth_margin": -0.010820962545217519,
+     "coupled_minus_truth_margin_ci": [
+      -0.0114367224638139,
+      -0.010267654354132816
+     ],
+     "coupled_minus_truth_acc": -0.029800590841949776,
+     "coupled_minus_truth_acc_ci": [
+      -0.03043943870014771,
+      -0.029217134416543576
+     ]
+    },
+    {
+     "tag": "cora_appnp",
+     "p": 0.2,
+     "depth": 20,
+     "coupled_minus_truth_margin": -0.019847569155420394,
+     "coupled_minus_truth_margin_ci": [
+      -0.020721176951577217,
+      -0.01898838101445305
+     ],
+     "coupled_minus_truth_acc": -0.04228581979320533,
+     "coupled_minus_truth_acc_ci": [
+      -0.043112998522895137,
+      -0.041517632939438706
+     ]
+    }
+   ]
+  },
+  "dblp_appnp": {
+   "cells": [
+    {
+     "tag": "dblp_appnp",
+     "p": 0.1,
+     "initialization": "truth",
+     "q": null,
+     "depth": 20,
+     "base_seed": 8000,
+     "n_realizations": 100,
+     "realized_corruption": 0.1000055687375914,
+     "margin_difference": 6.623824854953608e-05,
+     "margin_ci": [
+      -9.104291262544303e-05,
+      0.00021994563546409135
+     ],
+     "accuracy_difference": 0.00010483753813374519,
+     "accuracy_ci": [
+      6.948210740399121e-05,
+      0.00014067115393927805
+     ],
+     "corrupted_contribution": -4.205956338864242e-05,
+     "clean_contribution": 0.00010829781193819365,
+     "max_decomposition_residual": 4.791089400213444e-16
+    },
+    {
+     "tag": "dblp_appnp",
+     "p": 0.1,
+     "initialization": "coupled",
+     "q": null,
+     "depth": 20,
+     "base_seed": 8000,
+     "n_realizations": 100,
+     "realized_corruption": 0.1000055687375914,
+     "margin_difference": -0.010488518281440581,
+     "margin_ci": [
+      -0.01061016955530756,
+      -0.010367160539249042
+     ],
+     "accuracy_difference": -0.04549489128855746,
+     "accuracy_ci": [
+      -0.04570771996513487,
+      -0.045271645440898754
+     ],
+     "corrupted_contribution": -0.07547503472173663,
+     "clean_contribution": 0.06498651644029603,
+     "max_decomposition_residual": 3.191891195797325e-16
+    },
+    {
+     "tag": "dblp_appnp",
+     "p": 0.1,
+     "initialization": "independent",
+     "q": 0.1,
+     "depth": 20,
+     "base_seed": 8050,
+     "n_realizations": 100,
+     "realized_corruption": 0.09997627233548011,
+     "margin_difference": -0.0002753758320370825,
+     "margin_ci": [
+      -0.0004195771143498174,
+      -0.00012794364774004432
+     ],
+     "accuracy_difference": -0.0028758897874195024,
+     "accuracy_ci": [
+      -0.003063308072248329,
+      -0.002680965812793577
+     ],
+     "corrupted_contribution": -0.0011531207569089902,
+     "clean_contribution": 0.0008777449248718965,
+     "max_decomposition_residual": 4.193694003173931e-16
+    },
+    {
+     "tag": "dblp_appnp",
+     "p": 0.2,
+     "initialization": "truth",
+     "q": null,
+     "depth": 20,
+     "base_seed": 9000,
+     "n_realizations": 100,
+     "realized_corruption": 0.2000898261585395,
+     "margin_difference": -3.4540068650577015e-05,
+     "margin_ci": [
+      -0.0002067340729117101,
+      0.0001432115697019777
+     ],
+     "accuracy_difference": 0.00018497893564476176,
+     "accuracy_ci": [
+      0.00013679724952787463,
+      0.00023534574596872012
+     ],
+     "corrupted_contribution": -0.0007536444337644722,
+     "clean_contribution": 0.0007191043651138969,
+     "max_decomposition_residual": 4.1969466096913877e-16
+    },
+    {
+     "tag": "dblp_appnp",
+     "p": 0.2,
+     "initialization": "coupled",
+     "q": null,
+     "depth": 20,
+     "base_seed": 9000,
+     "n_realizations": 100,
+     "realized_corruption": 0.2000898261585395,
+     "margin_difference": -0.015246117755483237,
+     "margin_ci": [
+      -0.015387958874044068,
+      -0.015110969171102771
+     ],
+     "accuracy_difference": -0.04993341726792891,
+     "accuracy_ci": [
+      -0.05019588639775314,
+      -0.049686691927751686
+     ],
+     "corrupted_contribution": -0.09459885000924304,
+     "clean_contribution": 0.0793527322537598,
+     "max_decomposition_residual": 3.885780586188048e-16
+    },
+    {
+     "tag": "dblp_appnp",
+     "p": 0.2,
+     "initialization": "independent",
+     "q": 0.2,
+     "depth": 20,
+     "base_seed": 9050,
+     "n_realizations": 100,
+     "realized_corruption": 0.20003825480606272,
+     "margin_difference": -0.0009931843977208999,
+     "margin_ci": [
+      -0.0011908140054785947,
+      -0.0007996972865438554
+     ],
+     "accuracy_difference": -0.003272238632511736,
+     "accuracy_ci": [
+      -0.003566903539780146,
+      -0.0029959687182218664
+     ],
+     "corrupted_contribution": -0.003911708918081559,
+     "clean_contribution": 0.002918524520360658,
+     "max_decomposition_residual": 3.2439329000766293e-16
+    }
+   ],
+   "contrasts": [
+    {
+     "tag": "dblp_appnp",
+     "p": 0.1,
+     "depth": 20,
+     "coupled_minus_truth_margin": -0.01055475652999012,
+     "coupled_minus_truth_margin_ci": [
+      -0.01069353092329498,
+      -0.010421468258607625
+     ],
+     "coupled_minus_truth_acc": -0.0455997288266912,
+     "coupled_minus_truth_acc_ci": [
+      -0.04581812018788436,
+      -0.04537503631785387
+     ]
+    },
+    {
+     "tag": "dblp_appnp",
+     "p": 0.2,
+     "depth": 20,
+     "coupled_minus_truth_margin": -0.015211577686832657,
+     "coupled_minus_truth_margin_ci": [
+      -0.015417853818328017,
+      -0.015005464351570715
+     ],
+     "coupled_minus_truth_acc": -0.05011839620357368,
+     "coupled_minus_truth_acc_ci": [
+      -0.05038328047067939,
+      -0.049867542734008036
+     ]
+    }
+   ]
+  }
+ }
+}

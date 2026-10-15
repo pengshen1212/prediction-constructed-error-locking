@@ -1,0 +1,48 @@
+C:\Users\Peng1\OneDrive\文档\ChatGPT\hypergraph\experiments\prob2-relation-error\class_norm_fast.py:42: DeprecationWarning: Please import `csr_matrix` from the `scipy.sparse` namespace; the `scipy.sparse.csr` namespace is deprecated and will be removed in SciPy 2.0.0.
+  feats = pickle.load(f)
+n=2708, m=1579, n_cls=7, edge size: min=2 med=3 max=5, 同质边占比=0.657
+λ_max=44.6, h=0.0224, V: 2708×6
+
+--- p=0.05 ---
+  边际匹配: homog |E[dA]| 均值=0.1358, heterog |E[dA]| 均值=0.0081
+  MC 校验 max|mean(V^T E V)−C0|: A=9.56e-03 B=5.41e-03
+  ‖·‖_class: A=0.1768 B=0.0636 ratio=2.780 CI[2.390,3.263]
+  ‖·‖_total: A=9.2942 B=2.6361 ratio=3.526 CI[3.031,4.109]
+  ‖·‖_classF: A=0.2241 B=0.0872 ratio=2.569 CI[2.293,2.908]
+  对齐度: A=0.0113 B=0.0119 (top-eigvec 落入类子空间的比例)
+  类占比 ‖·‖_cls/‖·‖₂: A=0.0190 B=0.0241
+  平滑后类方向扰动 ‖(I−hB)^{T−1}XV‖:
+    T= 1: A=1.1505 B=0.4600 ratio=2.501 CI[2.181,2.881]
+    T= 5: A=0.5192 B=0.3383 ratio=1.535 CI[1.496,1.577]
+    T=10: A=0.3662 B=0.2743 ratio=1.335 CI[1.304,1.368]
+    T=20: A=0.2364 B=0.2070 ratio=1.142 CI[1.109,1.180]
+
+--- p=0.10 ---
+  边际匹配: homog |E[dA]| 均值=0.2568, heterog |E[dA]| 均值=0.0150
+  MC 校验 max|mean(V^T E V)−C0|: A=1.77e-02 B=6.75e-03
+  ‖·‖_class: A=0.2238 B=0.0777 ratio=2.879 CI[2.552,3.246]
+  ‖·‖_total: A=11.1111 B=3.4966 ratio=3.178 CI[2.735,3.645]
+  ‖·‖_classF: A=0.2804 B=0.1110 ratio=2.526 CI[2.294,2.787]
+  对齐度: A=0.0127 B=0.0099 (top-eigvec 落入类子空间的比例)
+  类占比 ‖·‖_cls/‖·‖₂: A=0.0201 B=0.0222
+  平滑后类方向扰动 ‖(I−hB)^{T−1}XV‖:
+    T= 1: A=1.5034 B=0.5732 ratio=2.623 CI[2.327,2.918]
+    T= 5: A=0.5918 B=0.4096 ratio=1.445 CI[1.417,1.473]
+    T=10: A=0.4148 B=0.3322 ratio=1.249 CI[1.228,1.270]
+    T=20: A=0.2718 B=0.2515 ratio=1.081 CI[1.059,1.104]
+
+--- p=0.20 ---
+  边际匹配: homog |E[dA]| 均值=0.4587, heterog |E[dA]| 均值=0.0259
+  MC 校验 max|mean(V^T E V)−C0|: A=1.11e-02 B=7.98e-03
+  ‖·‖_class: A=0.2362 B=0.0853 ratio=2.769 CI[2.518,3.038]
+  ‖·‖_total: A=12.6272 B=3.8979 ratio=3.239 CI[2.888,3.593]
+  ‖·‖_classF: A=0.3061 B=0.1191 ratio=2.570 CI[2.373,2.789]
+  对齐度: A=0.0126 B=0.0100 (top-eigvec 落入类子空间的比例)
+  类占比 ‖·‖_cls/‖·‖₂: A=0.0187 B=0.0219
+  平滑后类方向扰动 ‖(I−hB)^{T−1}XV‖:
+    T= 1: A=1.6614 B=0.6248 ratio=2.659 CI[2.447,2.855]
+    T= 5: A=0.6248 B=0.4455 ratio=1.403 CI[1.385,1.421]
+    T=10: A=0.4522 B=0.3623 ratio=1.248 CI[1.231,1.267]
+    T=20: A=0.3045 B=0.2747 ratio=1.108 CI[1.084,1.136]
+
+已写出 results/class_norm_fast.json

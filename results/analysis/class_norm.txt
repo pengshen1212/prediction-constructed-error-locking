@@ -1,0 +1,6 @@
+C:\Users\Peng1\OneDrive\文档\ChatGPT\hypergraph\experiments\prob2-relation-error\class_norm.py:36: DeprecationWarning: Please import `csr_matrix` from the `scipy.sparse` namespace; the `scipy.sparse.csr` namespace is deprecated and will be removed in SciPy 2.0.0.
+  feats = pickle.load(f)
+n=2708, n_cls=7, V 维度: 6
+λ_max=44.6, h=0.0224
+
+--- p=0.05 ---

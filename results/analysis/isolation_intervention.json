@@ -1,0 +1,1273 @@
+{
+ "protocol": "targeted rewiring intervention on isolated corrupted nodes vs matched random rewiring; fixed pred labels, coupled init phi=1, fixed B flips, APPNP alpha=0.9, T=20, p=0.10; same edge and same removed member shared by AR1/AR2; matched added node: corrupted, non-isolated, same true label and same predicted class; AR3: clean-node relation-removal reshuffle",
+ "seeds": {
+  "realization_base": 8000,
+  "choice_base": 8500,
+  "max_swaps": 250,
+  "n_real": 100
+ },
+ "tags": {
+  "cora_appnp": {
+   "n_realizations": 100,
+   "mean_isolated": 138.32,
+   "mean_targets": 107.72,
+   "mean_mod_edge_frac": 0.06822039265357821,
+   "total_skipped": {
+    "no_edge": 0,
+    "no_member": 3060,
+    "no_control": 0
+   },
+   "mean_deg0_excluded": 127.72,
+   "total_control_tier1": 601,
+   "total_control_tier2": 10171,
+   "mean_control_corrupted_frac": 0.060345343261093067,
+   "control_deg_ret_pre_median": 1.0,
+   "edge_size_median": 3.0,
+   "contrasts": [
+    {
+     "arm": "AR1",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": 0.023898510191521973,
+     "ci": [
+      0.02328316388189012,
+      0.024524225355505497
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": 0.004242983751846383,
+     "ci": [
+      0.004002954209748895,
+      0.004486706056129988
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": 0.10682973920702593,
+     "ci": [
+      0.10426437371238717,
+      0.10939837702724191
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": 0.036787666219435314,
+     "ci": [
+      0.03452495455362033,
+      0.0391101459869392
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": 0.014607674565276972,
+     "ci": [
+      0.014117226251914878,
+      0.015106875039877659
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 0.0005877385205301344,
+     "ci": [
+      0.0004685060088949931,
+      0.0007066757862423419
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": 0.27009219002396134,
+     "ci": [
+      0.26509982670545434,
+      0.27507830980919096
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": 0.09128270492275446,
+     "ci": [
+      0.08592081023490979,
+      0.09691550971265848
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": 0.04903801131856007,
+     "ci": [
+      0.04612072544339742,
+      0.052022275644639585
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": 0.00039452233616559586,
+     "ci": [
+      -9.044657998869555e-05,
+      0.0009051279720827943
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "removed",
+     "quantity": "margin_AminusB",
+     "mean": 0.03504671184177643,
+     "ci": [
+      0.03172025982056697,
+      0.038587833958782444
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "removed",
+     "quantity": "acc_AminusB",
+     "mean": 9.259259259259301e-05,
+     "ci": [
+      0.0,
+      0.000277777777777779
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": 0.0107701010683195,
+     "ci": [
+      0.01053380263797287,
+      0.011021798422273387
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": 0.013128409123202477,
+     "ci": [
+      0.01268240911096852,
+      0.013577587050276684
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "acc_A",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "acc_B",
+     "mean": -0.004242983751846383,
+     "ci": [
+      -0.004486706056129988,
+      -0.004002954209748895
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": 0.0004714439430433148,
+     "ci": [
+      0.0002772601532161493,
+      0.0006718289250837844
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": 0.00011447562776957354,
+     "ci": [
+      4.0620384047270725e-05,
+      0.0001883308714918819
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": -0.0014218661438649737,
+     "ci": [
+      -0.001939535416498766,
+      -0.0009052496428995427
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": 0.001024508959483179,
+     "ci": [
+      0.0003979242352152597,
+      0.0016251355544123292
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": 0.0006836987358475355,
+     "ci": [
+      0.0005032268897891873,
+      0.000871154254760207
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 1.2583897360235464e-05,
+     "ci": [
+      -2.8245491704843584e-05,
+      5.3337991757184394e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": -0.0019196293194738356,
+     "ci": [
+      -0.0022035288366420483,
+      -0.0016068102127156246
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": 6.523796974156727e-05,
+     "ci": [
+      -0.0010321420991904163,
+      0.0010885486428540115
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": 0.06883810172687181,
+     "ci": [
+      0.06557785626097297,
+      0.0721994103655296
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": 0.0020200778970805933,
+     "ci": [
+      0.0010277128180862765,
+      0.003087894415708538
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "removed",
+     "quantity": "margin_AminusB",
+     "mean": -0.0496395960396292,
+     "ci": [
+      -0.05174399475568409,
+      -0.04745013490804094
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "removed",
+     "quantity": "acc_AminusB",
+     "mean": 0.0003839813319104757,
+     "ci": [
+      9.259259259259301e-05,
+      0.0007689333491247763
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": -0.0001437965513775706,
+     "ci": [
+      -0.0001965880718125518,
+      -9.199207310794133e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": 0.0006152404944208858,
+     "ci": [
+      0.0004524322526852371,
+      0.0007836706791192576
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "acc_A",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "acc_B",
+     "mean": -0.00011447562776957354,
+     "ci": [
+      -0.0001883308714918819,
+      -4.0620384047270725e-05
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": -0.001028585861752761,
+     "ci": [
+      -0.001139368897620895,
+      -0.0009194468938202566
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": -0.0001698670605612984,
+     "ci": [
+      -0.0002511078286558377,
+      -8.862629246676576e-05
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": -0.0025641192705005787,
+     "ci": [
+      -0.0027511946241208433,
+      -0.002371309433944204
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": -0.0011916121838202497,
+     "ci": [
+      -0.0018196378030081862,
+      -0.0005848015912218416
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": -0.0008538991434649679,
+     "ci": [
+      -0.000977663848978459,
+      -0.0007291971703278572
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": -5.34371286810531e-05,
+     "ci": [
+      -0.00010311153559969221,
+      -4.006951496819044e-06
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": -0.004160952552524615,
+     "ci": [
+      -0.004486885712189856,
+      -0.0038332507931112926
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": -0.0017953667177072286,
+     "ci": [
+      -0.003256212555798824,
+      -0.0003721520140385792
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": 0.0030455308490633724,
+     "ci": [
+      0.0018451762223083313,
+      0.004329678254425818
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": -0.0003876791231040433,
+     "ci": [
+      -0.0007940801668615681,
+      -8.695652173912994e-05
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "removed",
+     "quantity": "margin_AminusB",
+     "mean": 0.0008876446099829249,
+     "ci": [
+      -0.00053428392044634,
+      0.0021634896061373072
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "removed",
+     "quantity": "acc_AminusB",
+     "mean": 0.00019246784491533275,
+     "ci": [
+      0.0,
+      0.0004839455908207646
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": -0.0002601703362064245,
+     "ci": [
+      -0.00027914339900520716,
+      -0.0002398166959716999
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": -0.0007684155255463141,
+     "ci": [
+      -0.000879321227667538,
+      -0.0006563136475195196
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "acc_A",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "acc_B",
+     "mean": 0.0001698670605612984,
+     "ci": [
+      8.862629246676576e-05,
+      0.0002511078286558377
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": 0.023427066248478658,
+     "ci": [
+      0.022835505382657124,
+      0.02403143029464581
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": 0.00412850812407681,
+     "ci": [
+      0.0038810930576070944,
+      0.004383308714918755
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": 0.1082516053508909,
+     "ci": [
+      0.10564476250532583,
+      0.1108542769135267
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": 0.03576315725995213,
+     "ci": [
+      0.03346320313992536,
+      0.03819613301528442
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": 0.013923975829429436,
+     "ci": [
+      0.013433505144056675,
+      0.014402359048826707
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 0.000575154623169899,
+     "ci": [
+      0.00045627726868317764,
+      0.0006940389599591533
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": 0.2720118193434351,
+     "ci": [
+      0.26701347259825986,
+      0.2769542617942707
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": 0.09121746695301289,
+     "ci": [
+      0.08552874916298484,
+      0.0971187040547687
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": -0.019800090408311738,
+     "ci": [
+      -0.023187785895535256,
+      -0.01651731656936949
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": -0.0016255555609149975,
+     "ci": [
+      -0.0026494338550657674,
+      -0.000645101372976208
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": 0.01091389761969707,
+     "ci": [
+      0.010678559540286625,
+      0.011165583664661798
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": 0.012513168628781587,
+     "ci": [
+      0.012075563745892694,
+      0.012942208756966469
+     ]
+    }
+   ],
+   "baseline": {
+    "margin_AB_corrupted": -0.44696869800837163,
+    "mA_corrupted": -0.9966083197003937,
+    "mB_corrupted": -0.5496396216920221,
+    "margin_AB_clean": 0.04154010998314882,
+    "mA_clean": 0.9696633851967489,
+    "mB_clean": 0.9281232752136002,
+    "C_cor": -0.045106319223807485,
+    "C_cln": 0.03732218582976082,
+    "mA_targets": -1.0,
+    "mB_targets": -0.1481345320669071
+   }
+  },
+  "dblp_appnp": {
+   "n_realizations": 100,
+   "mean_isolated": 4033.41,
+   "mean_targets": 196.08,
+   "mean_mod_edge_frac": 0.008768054375531012,
+   "total_skipped": {
+    "no_edge": 0,
+    "no_member": 5392,
+    "no_control": 0
+   },
+   "mean_deg0_excluded": 0.0,
+   "total_control_tier1": 8024,
+   "total_control_tier2": 11584,
+   "mean_control_corrupted_frac": 0.4107082890502117,
+   "control_deg_ret_pre_median": 1.0,
+   "edge_size_median": 2.0,
+   "contrasts": [
+    {
+     "arm": "AR1",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": 0.002854845538033104,
+     "ci": [
+      0.0027773803897847434,
+      0.0029316545150903546
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": 0.0005588107113456953,
+     "ci": [
+      0.0005362815360030918,
+      0.0005801171856084398
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": 0.010459197687688788,
+     "ci": [
+      0.010252713360632817,
+      0.01065724625011327
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": 0.003832614085529148,
+     "ci": [
+      0.0036287576806752412,
+      0.00403431944633398
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": 0.0020100286080238796,
+     "ci": [
+      0.0019431049098693435,
+      0.002077511727798856
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 0.00019506150127266198,
+     "ci": [
+      0.00018107162891027319,
+      0.00020877117220546092
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": 0.2107639102720962,
+     "ci": [
+      0.2069100732596473,
+      0.2143554475334207
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": 0.07032965213024557,
+     "ci": [
+      0.06651375961477814,
+      0.07386365825976664
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": 0.0016403946777800655,
+     "ci": [
+      0.001163416251464287,
+      0.0020763610793398763
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": 0.0003658254404821759,
+     "ci": [
+      0.0001029100529100524,
+      0.0006853586807087029
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "removed",
+     "quantity": "margin_AminusB",
+     "mean": -0.06388349843159583,
+     "ci": [
+      -0.06584630854557166,
+      -0.061874366172100174
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "removed",
+     "quantity": "acc_AminusB",
+     "mean": 5.12820512820511e-05,
+     "ci": [
+      0.0,
+      0.0001538461538461533
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": 0.0010458712193572404,
+     "ci": [
+      0.0010247801243845243,
+      0.0010658602783170496
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": 0.0018089743186758427,
+     "ci": [
+      0.001749237585624786,
+      0.0018693608706980148
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "acc_A",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR1",
+     "group": "summary",
+     "quantity": "acc_B",
+     "mean": -0.0005588107113456953,
+     "ci": [
+      -0.0005801171856084398,
+      -0.0005362815360030918
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": -2.8280843686137036e-05,
+     "ci": [
+      -6.282764831164384e-05,
+      7.066790863923583e-06
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": 0.00013074427388503728,
+     "ci": [
+      0.00011718560844511043,
+      0.00014430293932496952
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": -0.0003053984815205379,
+     "ci": [
+      -0.0004217852948097483,
+      -0.0001901831257644066
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": 0.000905943920645837,
+     "ci": [
+      0.0007974349094853255,
+      0.0010190458580448104
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": 2.385730851208745e-06,
+     "ci": [
+      -2.649814306835824e-05,
+      3.229243619906641e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 4.467016448609917e-05,
+     "ci": [
+      3.5512576317742323e-05,
+      5.382375639898915e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": -1.9814471592891623e-05,
+     "ci": [
+      -0.00010616577941110252,
+      6.144057928736398e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": 5.081040278239024e-05,
+     "ci": [
+      -0.00020362121091318332,
+      0.0002590055650778988
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": 0.030905723526553377,
+     "ci": [
+      0.028122034479664052,
+      0.0334946269414676
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": 0.016065280758983495,
+     "ci": [
+      0.014311599162107039,
+      0.017993116506460398
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "removed",
+     "quantity": "margin_AminusB",
+     "mean": -0.0835258391582758,
+     "ci": [
+      -0.08541571738706581,
+      -0.08173795216172956
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "removed",
+     "quantity": "acc_AminusB",
+     "mean": 0.00010076142131979714,
+     "ci": [
+      0.0,
+      0.0002522842639593914
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": -3.0414552664337346e-05,
+     "ci": [
+      -4.2112715256660905e-05,
+      -1.8861062969521556e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": 2.1337089782017677e-06,
+     "ci": [
+      -2.3833085265972197e-05,
+      2.9056308306489138e-05
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "acc_A",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR2",
+     "group": "summary",
+     "quantity": "acc_B",
+     "mean": -0.00013074427388503728,
+     "ci": [
+      -0.00014430293932496952,
+      -0.00011718560844511043
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": -0.00022636754522418535,
+     "ci": [
+      -0.00023784278467128155,
+      -0.00021472634787663157
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": -3.825480606266085e-05,
+     "ci": [
+      -4.6486852936898995e-05,
+      -3.0264878214125713e-05
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": -0.00033488217841816213,
+     "ci": [
+      -0.00035859846045469587,
+      -0.00031226360495506495
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": -0.00038658897947581425,
+     "ci": [
+      -0.00046324162865254184,
+      -0.00031026834051873717
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": -0.00021425935161006993,
+     "ci": [
+      -0.00022691090732084737,
+      -0.00020166717299079732
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 5.356853335714007e-07,
+     "ci": [
+      -2.423284989455099e-06,
+      3.232073939613694e-06
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": -0.00029099618726908025,
+     "ci": [
+      -0.0003792444881106447,
+      -0.00020334257470727268
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": -0.00025661863012230835,
+     "ci": [
+      -0.0005658846534496735,
+      9.02073247800481e-06
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": -0.00016203819422381873,
+     "ci": [
+      -0.00048754805257446705,
+      0.0001648437405663565
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": -5.154639175257714e-05,
+     "ci": [
+      -0.0001546391752577314,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "removed",
+     "quantity": "margin_AminusB",
+     "mean": -0.0001622240150581078,
+     "ci": [
+      -0.0006415926483199213,
+      0.0003162253711254628
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "removed",
+     "quantity": "acc_AminusB",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": -3.352754485728637e-05,
+     "ci": [
+      -3.59093979839604e-05,
+      -3.1268895027462286e-05
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": -0.00019284000036690375,
+     "ci": [
+      -0.00020422117406667474,
+      -0.000181507859281332
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "acc_A",
+     "mean": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "arm": "AR3",
+     "group": "summary",
+     "quantity": "acc_B",
+     "mean": 3.825480606266085e-05,
+     "ci": [
+      3.0264878214125713e-05,
+      4.6486852936898995e-05
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "all",
+     "quantity": "margin_AminusB",
+     "mean": 0.002883126381719241,
+     "ci": [
+      0.002805348833605418,
+      0.002961231454001957
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "all",
+     "quantity": "acc_AminusB",
+     "mean": 0.000428066437460658,
+     "ci": [
+      0.00040167546365793886,
+      0.00045252045905767293
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "corrupted",
+     "quantity": "margin_AminusB",
+     "mean": 0.010764596169209328,
+     "ci": [
+      0.010542589826550508,
+      0.010978007682392273
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "corrupted",
+     "quantity": "acc_AminusB",
+     "mean": 0.002926670164883311,
+     "ci": [
+      0.0027176581383902263,
+      0.003129149991278553
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "clean",
+     "quantity": "margin_AminusB",
+     "mean": 0.0020076428771726705,
+     "ci": [
+      0.0019399714302643929,
+      0.0020762194032036417
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "clean",
+     "quantity": "acc_AminusB",
+     "mean": 0.0001503913367865628,
+     "ci": [
+      0.0001345449375996091,
+      0.00016678972395400374
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "targets",
+     "quantity": "margin_AminusB",
+     "mean": 0.2107837247436891,
+     "ci": [
+      0.20694772196052497,
+      0.21437237138401014
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "targets",
+     "quantity": "acc_AminusB",
+     "mean": 0.07027884172746318,
+     "ci": [
+      0.0664627095294289,
+      0.0738356139582876
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "controls",
+     "quantity": "margin_AminusB",
+     "mean": -0.029265328848773312,
+     "ci": [
+      -0.03188329609816111,
+      -0.02662295046214801
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "controls",
+     "quantity": "acc_AminusB",
+     "mean": -0.01569945531850132,
+     "ci": [
+      -0.017613451297838447,
+      -0.013899319481676928
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "summary",
+     "quantity": "C_cor",
+     "mean": 0.0010762857720215777,
+     "ci": [
+      0.0010548815751617643,
+      0.001097044216878771
+     ]
+    },
+    {
+     "arm": "AR1-AR2",
+     "group": "summary",
+     "quantity": "C_cln",
+     "mean": 0.0018068406096976406,
+     "ci": [
+      0.0017462485011811074,
+      0.0018684924528334847
+     ]
+    }
+   ],
+   "baseline": {
+    "margin_AB_corrupted": -0.7547232143674776,
+    "mA_corrupted": -0.999067203934452,
+    "mB_corrupted": -0.24434398956697428,
+    "margin_AB_clean": 0.07220959767452495,
+    "mA_clean": 0.9848118204752808,
+    "mB_clean": 0.9126022228007556,
+    "C_cor": -0.07547503472173663,
+    "C_cln": 0.06498651644029603,
+    "mA_targets": -1.0,
+    "mB_targets": -0.24093506629553363
+   }
+  }
+ }
+}
